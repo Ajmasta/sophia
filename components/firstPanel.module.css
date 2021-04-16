@@ -307,13 +307,13 @@
       transform: translateX(0px);
     }
     50% {
-      transform: translateX(-221.77px);
+      transform: translateX(-221px);
 
       background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
-      transform: translateX(-221.77px);
+      transform: translateX(-221px);
     }
     100% {
       transform: translateX(0);
@@ -329,13 +329,13 @@
       transform: translateX(0px);
     }
     50% {
-      transform: translateX(221.77px);
+      transform: translateX(221px);
 
       background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
-      transform: translateX(221.77px);
+      transform: translateX(221px);
     }
     100% {
       transform: translateX(0);
