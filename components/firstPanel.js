@@ -19,8 +19,6 @@ const FirstPanel = () => {
        console.log(width)
        root.style.setProperty("--sophiaWidth",(width-85) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
-       const rootStyles = getComputedStyle(root)
-       console.log(rootStyles)
 
     },[])
     const animateFunction = () => {
