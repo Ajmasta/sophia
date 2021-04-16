@@ -238,9 +238,7 @@
   width: 67px;
 }
 .mobileCircle {
-  position: absolute;
-  bottom: 50px;
-  left: 409px;
+  opacity: 0;
 }
 @media (max-width: 320px) {
   .unmovingTextContainer {
@@ -262,6 +260,7 @@
     position: absolute;
     bottom: -5px;
     left: 130px;
+    opacity: 1;
   }
   .circle {
     display: ;
