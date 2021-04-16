@@ -1,6 +1,6 @@
 .container {
   min-height: 600px;
-  height: 700px;
+  height: 750px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -215,6 +215,9 @@
 .horizontalTextContainer {
   display: flex;
   color: black !important;
+  margin-top: -40px;
+  width: 867px;
+  justify-content: space-around;
 }
 @media (max-width: 320px) {
   .unmovingTextContainer {
@@ -261,6 +264,8 @@
   .horizontalTextContainer {
     display: flex;
     color: black !important;
+    margin-top: 0px;
+    width: 100%;
   }
   .letterContainer {
     max-height: 150px;
