@@ -208,15 +208,19 @@
   .letter4,
   .letter5,
   .letter6 {
-    color: white;
+    color: black;
     margin-left: 10px;
     font-size: 60px;
+  }
+  .circle {
+    display: none;
   }
   .letter6 {
     margin-right: 20px;
   }
   .container {
     max-height: 600px;
+    cursor: default;
   }
   .upperContainer {
     max-height: 200px;
@@ -225,6 +229,7 @@
   .subTextContainer {
     max-height: 200px;
     margin-top: -20px;
+    max-width: 306.77px;
   }
   .letterContainer {
     max-height: 150px;
