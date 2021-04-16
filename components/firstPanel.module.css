@@ -528,12 +528,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(var(--sophiaWidthN));
+    transform: translateX(-783px);
 
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(var(--sophiaWidthN));
+    transform: translateX(-783px);
   }
   100% {
     transform: translateX(0);
@@ -549,12 +549,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(var(--sophiaWidth));
+    transform: translateX(783px);
 
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(var(--sophiaWidth));
+    transform: translateX(783px);
   }
   100% {
     transform: translateX(0);
