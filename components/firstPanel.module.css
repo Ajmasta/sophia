@@ -229,22 +229,18 @@
   .subTextContainer {
     max-height: 200px;
     margin-top: -20px;
-    max-width: 306.77px;
   }
   .letterContainer {
     max-height: 150px;
     min-height: 0px;
-    max-width: 320px;
+    max-width: 306.77px;
   }
   .subText {
     font-size: 10px;
     font-weight: 500;
   }
   #subText1 {
-    font-size: 13px;
-  }
-  #subText0 {
-    font-size: 13px;
+    font-size: 10px;
   }
   .leftBar {
     width: 5px;
@@ -253,7 +249,7 @@
     position: relative;
   }
   .unmovingTextContainer {
-    margin-top: -28px;
+    margin-top: -5px;
     font-size: 15px;
     justify-content: flex-start;
     align-items: center;
@@ -420,11 +416,9 @@
     }
     50% {
       transform: translateY(0px);
-      font-size: 10px;
     }
     100% {
       transform: translateY(-42px);
-      font-size: 13px;
     }
   }
   @keyframes subText3LeaveMobile {
