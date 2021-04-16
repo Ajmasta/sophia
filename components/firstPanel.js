@@ -14,6 +14,7 @@ const FirstPanel = () => {
        const root = document.querySelector(":root") 
        
        const width = document.getElementById("letterContainer").offsetWidth
+       console.log(width)
        if (width>100){
        root.style.setProperty("--sophiaWidth",(width-85) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
@@ -31,7 +32,6 @@ const FirstPanel = () => {
     const animateFunction = () => {
                
                 setTimeout(()=>{
-                console.log("timeout")
                 subTextArray.push(subTextArray.splice(0,1))
                 setSubTextArray([...subTextArray])
                
