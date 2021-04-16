@@ -14,9 +14,10 @@ const FirstPanel = () => {
        const root = document.querySelector(":root") 
        
        const width = document.getElementById("letterContainer").offsetWidth
+       if (width>100){
        root.style.setProperty("--sophiaWidth",(width-85) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
-       
+       }
     },[subTextArray])
     useEffect(()=>{
        const root = document.querySelector(":root") 
