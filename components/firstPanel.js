@@ -5,19 +5,19 @@ import styles from "./firstPanel.module.css"
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
     let timeout = ""
-    const [subTextArray,setSubTextArray]= useState(["Business consulting.","web development.","workflow optimization.","financial advising."])
-    const [animate,setAnimate] = useState(true)
+    const [subTextArray,setSubTextArray]= useState(["Business consulting. ","Web development. ","Workflow optimization. ","financial advising. "])
+    
     useEffect(()=>{
        
-       if (animate) requestAnimationFrame(animateFunction)
+       requestAnimationFrame(animateFunction)
 
        const root = document.querySelector(":root") 
        
        const width = document.getElementById("letterContainer").offsetWidth
        console.log(width)
        if (width>100){
-       root.style.setProperty("--sophiaWidth",(width-85) +"px")
-       root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
+       root.style.setProperty("--sophiaWidth",(width-85.5) +"px")
+       root.style.setProperty("--sophiaWidthN",(-width+85.5)+"px")
        }
     },[subTextArray])
   
@@ -27,15 +27,10 @@ const FirstPanel = () => {
                 subTextArray.push(subTextArray.splice(0,1))
                 setSubTextArray([...subTextArray])
                
-                },3800)
+                },5800)
             
     }
-    const handleClick =(e) => {
-        console.log(e.target.id)
-
-       setAnimate(true)
-        
-    }
+  
     const handleMouseMove=(e) => {
        
         const circleCursor = document.getElementById("circleCursor")
@@ -45,7 +40,7 @@ const FirstPanel = () => {
     }
 
     const handleMouseEnterLetter = (e) => { 
-        e.target.style.color = "black"
+        //e.target.style.color = "black"
 
     }
 const handleMouseLeave = () => { 
@@ -87,21 +82,23 @@ const handleMouseEnter = (e) => {
         <div className={styles.bottomBar}><div className={styles.bottomBarBullet}></div></div>
         </div>
         <div className={styles.subTextContainer}>
-        <div className={styles.unmovingTextContainer}>
-        <p> Your one-stop solution for </p>
-        </div>
-        <div className={styles.movingTextContainer}>
+        {/* one stop*/}
+        <div className={styles.horizontalTextContainer}>
         {subTextArray.map((subtext,i)=>{
-            if (i===0) return <p key={subtext}  id={styles.subText0} onClick={handleClick} className={`${styles.subText} ${animate? styles.subText0Animate:""}`}> {subtext}</p>
-            if (i===1) return <p key={subtext}  id={styles.subText1} onClick={handleClick} className={`${styles.subText} ${animate? styles.subText1Animate:""}`}> {subtext}</p>
-            if (i===2) return <p key={subtext}  id={styles.subText2} onClick={handleClick} className={`${styles.subText} ${animate? styles.subText2Animate:""}`}> {subtext}</p>
+            if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}> {subtext}  </p>
+            if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}  </p>
+            
 
         })}
-     <p key={subTextArray[3]}  id={styles.subText3} onClick={handleClick} className={`${styles.subText} ${animate? styles.subText3Animate:""}`}> {subTextArray[3]}</p>
-     </div>
         </div>
+        {/* vertical text*/}
+        </div>
+        
         <div className={styles.contactContainer}>
-            <button className={styles.contactButton}>Contact Us</button>
+            <button className={styles.contactButton}>Contact us</button>
+        </div>
+        <div className={styles.image} >
+        <Image width={80} height={130} src="/images/owl.png" />
         </div>
     </div>
     </>
@@ -124,4 +121,22 @@ export default FirstPanel
         letter4.style.transform = `translate3d(${e.clientX/15}px,${e.clientY/12}px,${e.clientY/10}px)`
         letter5.style.transform = `translate3d(${e.clientX/12}px,${-e.clientY/18}px,${e.clientY/10}px)`
         letter6.style.transform = `translate3d(${e.clientX/13}px,${e.clientY/10}px,${e.clientY/10}px)`
+        */
+
+        /*<div className={styles.unmovingTextContainer}>
+        <p> Your one-stop solution for </p>
+        </div>*/
+
+
+        /* 
+                <div className={styles.movingTextContainer}>
+        {subTextArray.map((subtext,i)=>{
+            if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate}`}> {subtext}</p>
+            if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}`}> {subtext}</p>
+            if (i===2) return <p key={subtext}  id={styles.subText2}  className={`${styles.subText} ${styles.subText2Animate}`}> {subtext}</p>
+
+        })}
+     <p key={subTextArray[3]}  id={styles.subText3} className={`${styles.subText} ${styles.subText3Animate}`}> {subTextArray[3]}</p>
+     </div>
+        
         */

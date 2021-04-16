@@ -15,7 +15,8 @@ a {
   box-sizing: border-box;
 }
 :root {
-  --bulletColors: white;
+  --bulletColors: black;
   --sophiaWidth: 222px;
   --sophiaWidthN: -222px;
+  --sophiaBarColors: transparent;
 }

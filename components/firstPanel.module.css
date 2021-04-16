@@ -7,15 +7,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: white;
   cursor: none;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1586076100131-32505c71d0d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
   background-position: 50%;
-  font-family: "Times New Roman", Times, sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
 }
-
+.image {
+  position: absolute;
+  bottom: -5px;
+  z-index: 40000;
+}
 .letter1,
 .letter2,
 .letter3,
@@ -28,11 +34,10 @@
   transition: 0.4s all;
   transition-timing-function: cubic-bezier(0.2, -0.9, 0.5, 0);
 
-  text-shadow: black 2px 2px 2px;
+  text-shadow: 1px 1px 3px black;
   background-color: transparent;
 }
-
-.letter2 {
+1 .letter2 {
   animation-delay: 1s;
 }
 .letter3 {
@@ -61,12 +66,12 @@
   max-height: 300px;
   display: flex;
   align-items: center;
-  box-shadow: 5px 10px 30px black;
+  box-shadow: 1px 1px 35px black;
 }
 .bottomBar {
   height: 5px;
   width: 100%;
-  background-color: black;
+  background-color: var(--sophiaBarColors);
 }
 .bottomBarBullet {
   height: 5px;
@@ -78,7 +83,8 @@
 .topBar {
   height: 5px;
   width: 100%;
-  background-color: black;
+  background-color: var(--sophiaBarColors);
+  z-index: 600;
 }
 .topBarBullet {
   height: 5px;
@@ -91,7 +97,7 @@
 .rightBar {
   width: 5px;
   height: 100%;
-  background-color: black;
+  background-color: var(--sophiaBarColors);
 }
 .rightBarBullet {
   width: 5px;
@@ -105,7 +111,7 @@
 .leftBar {
   width: 5px;
   height: 100%;
-  background-color: black;
+  background-color: var(--sophiaBarColors);
   position: relative;
 }
 .leftBarBullet {
@@ -121,9 +127,12 @@
 .subTextContainer {
   flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   height: 275px;
+  color: white;
 }
+
 .movingTextContainer {
   height: 275px;
   width: 400px;
@@ -147,19 +156,22 @@
   z-index: 100;
 }
 .contactButton {
-  margin-bottom: -50px;
+  position: absolute;
+  bottom: -50px;
+  left: 100px;
   background: grey;
   padding: 20px;
   font-size: 25px;
-  background-image: url("https://images.unsplash.com/photo-1586076100131-32505c71d0d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
   background-position: 50%;
   box-shadow: 3px 3px 10px black;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
 }
 .circle {
   background-color: transparent;
-  border: 2px black solid;
+  border: 2px goldenrod solid;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -227,26 +239,29 @@
     margin-top: -120px;
   }
   .subTextContainer {
-    max-height: 200px;
-    margin-top: -20px;
+    display: flex;
+    max-height: 100px;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+  .horizontalTextContainer {
+    display: flex;
+    color: black !important;
   }
   .letterContainer {
     max-height: 150px;
     min-height: 0px;
+    box-shadow: none;
   }
   .subText {
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 800;
   }
   #subText1 {
     font-size: 10px;
+    opacity: 0;
   }
-  .leftBar {
-    width: 5px;
-    height: 100%;
-    background-color: black;
-    position: relative;
-  }
+
   .unmovingTextContainer {
     margin-top: -5px;
     font-size: 15px;
@@ -286,10 +301,11 @@
     height: 60px;
   }
   .subText0Animate {
-    animation: subText0LeaveMobile 4s infinite;
+    animation: horizontalSubText 6s infinite;
   }
   .subText1Animate {
-    animation: subText1LeaveMobile 4s infinite;
+    animation: horizontalSubText 6s infinite;
+    animation-delay: 0s;
   }
   .subText2Animate {
     animation: subText2LeaveMobile 4s infinite;
@@ -308,7 +324,6 @@
     50% {
       transform: translateX(var(--sophiaWidthN));
 
-      background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
@@ -330,7 +345,6 @@
     50% {
       transform: translateX(var(--sophiaWidth));
 
-      background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
@@ -351,7 +365,6 @@
     }
     50% {
       transform: translateY(90px);
-      background-color: white;
     }
     75% {
       transform: translateY(90px);
@@ -369,13 +382,24 @@
     }
     50% {
       transform: translateY(-90px);
-      background-color: white;
     }
     75% {
       transform: translateY(-90px);
     }
     100% {
       transform: translateX(0);
+    }
+  }
+
+  @keyframes horizontalSubText {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
   @keyframes subText0LeaveMobile {
@@ -447,7 +471,6 @@
   }
   50% {
     transform: translateY(220px);
-    background-color: white;
   }
   75% {
     transform: translateY(220px);
@@ -465,7 +488,6 @@
   }
   50% {
     transform: translateY(-220px);
-    background-color: white;
   }
   75% {
     transform: translateY(-220px);
@@ -483,13 +505,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(-782.89px);
+    transform: translateX(var(--sophiaWidthN));
 
-    background-color: white;
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(-782.89px);
+    transform: translateX(var(--sophiaWidthN));
   }
   100% {
     transform: translateX(0);
@@ -505,13 +526,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(782.89px);
+    transform: translateX(var(--sophiaWidth));
 
-    background-color: white;
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(782.89px);
+    transform: translateX(var(--sophiaWidth));
   }
   100% {
     transform: translateX(0);
