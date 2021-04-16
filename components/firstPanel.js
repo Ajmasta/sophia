@@ -20,15 +20,7 @@ const FirstPanel = () => {
        root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
        }
     },[subTextArray])
-    useEffect(()=>{
-       const root = document.querySelector(":root") 
-       
-       const width = document.getElementById("letterContainer").offsetWidth
-      
-       root.style.setProperty("--sophiaWidth",(width-85) +"px")
-       root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
-
-    },[])
+  
     const animateFunction = () => {
                
                 setTimeout(()=>{
