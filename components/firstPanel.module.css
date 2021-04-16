@@ -2,6 +2,7 @@
   min-height: 600px;
   height: 750px;
   width: 100%;
+  max-width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -173,7 +174,18 @@
   font-weight: 400;
   font-family: "Times New Roman", Times, serif;
 }
-.circle {
+.circleCursor {
+  background-color: transparent;
+  background-image: url("../public/images/owl.png");
+  background-size: cover;
+  border: 2px black solid;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+}
+.circleLogo {
   background-color: transparent;
   background-image: url("../public/images/owl.png");
   background-size: cover;
@@ -240,6 +252,7 @@
 .mobileCircle {
   opacity: 0;
 }
+
 @media (max-width: 320px) {
   .unmovingTextContainer {
     font-size: 10px;
@@ -262,9 +275,21 @@
     left: 130px;
     opacity: 1 !important;
   }
-  .circle {
-    opacity: 0;
+  .circleCursor {
+    display: none;
   }
+  .circleLogo {
+    background-color: transparent;
+    background-image: url("../public/images/owl.png");
+    background-size: cover;
+    border: 2px black solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+  }
+
   .image img {
     max-height: 130px;
   }
@@ -277,7 +302,6 @@
   }
   .container {
     max-height: 500px;
-    cursor: default;
   }
   .upperContainer {
     max-height: 170px;

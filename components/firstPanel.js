@@ -41,7 +41,9 @@ const FirstPanel = () => {
     }
 
     const handleMouseClick= (e) => {
-        const leftPosition = `${e.clientX}px`
+        const width = document.getElementById("containerFirstPanel").offsetWidth
+        console.log("container",width)
+         const leftPosition = e.clientX > width-51?`${width-51}px` :`${e.clientX}px`
         const topPosition = `${e.clientY+scrollY}px`
         setOwlArray([...owlArray,{leftPosition,topPosition}])
     }
@@ -64,11 +66,11 @@ const handleMouseEnter = (e) => {
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Philosopher:wght@700&family=Sofia&family=Spectral:wght@500&display=swap" rel="stylesheet" />     
         </Head>
-        <div onMouseMove={(e)=>handleMouseMove(e)} onClick={handleMouseClick} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
-        <div id="circleCursor" className={styles.circle} />
-        {owlArray.map(owl=><div className={`${styles.circle} ${styles.circleAnimate}`} style={{position:"absolute",top:owl.topPosition, left:owl.leftPosition}}/>)}
+        <div id="containerFirstPanel" onMouseMove={(e)=>handleMouseMove(e)} onClick={handleMouseClick} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
+        <div id="circleCursor" className={styles.circleCursor} />
+        {owlArray.map(owl=><div className={`${styles.circleLogo} ${styles.circleAnimate}`} style={{position:"absolute",top:owl.topPosition, left:owl.leftPosition}}/>)}
         <div className={styles.upperContainer}>
-            <div className={`${styles.circle} ${styles.mobileCircle}`} ></div>
+            <div className={`${styles.circleLogo} ${styles.mobileCircle}`} ></div>
             <div className={styles.topBar}>
             <div className={styles.topBarBullet} ></div>
             </div>
