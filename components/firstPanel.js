@@ -14,19 +14,26 @@ const FirstPanel = () => {
        
        requestAnimationFrame(animateFunction)
 
-       const root = document.querySelector(":root") 
-       
-       const width = document.getElementById("letterContainer").offsetWidth
-       console.log(width)
-       if (width>100){
-       root.style.setProperty("--sophiaWidth",(width-85.5) +"px")
-       root.style.setProperty("--sophiaWidthN",(-width+85.5)+"px")
-       }
-       if(!mobile && width < 400){
-        root.style.setProperty("--sophiaWidth","783px")
-        root.style.setProperty("--sophiaWidthN","-783px")
-       }
+      
+      
     },[subTextArray])
+
+    useEffect(()=>{
+
+    
+        const root = document.querySelector(":root") 
+       
+        const width = document.getElementById("letterContainer").offsetWidth
+        
+        if (width>100){
+        root.style.setProperty("--sophiaWidth",(width-85.5) +"px")
+        root.style.setProperty("--sophiaWidthN",(-width+85.5)+"px")
+        }
+        if(!mobile && width < 400){
+            root.style.setProperty("--sophiaWidth","783px")
+            root.style.setProperty("--sophiaWidthN","-783px")
+           }
+    },[mobile])
   
     const animateFunction = () => {
                
