@@ -260,10 +260,10 @@
     position: absolute;
     bottom: -5px;
     left: 130px;
-    opacity: 1;
+    opacity: 1 !important;
   }
   .circle {
-    display: ;
+    opacity: 0;
   }
   .image img {
     max-height: 130px;
