@@ -60,6 +60,7 @@
   flex-direction: column;
   align-content: center;
   justify-items: center;
+  position: relative;
 }
 .letterContainer {
   background-color: transparent;
@@ -174,12 +175,26 @@
 }
 .circle {
   background-color: transparent;
-  border: 2px goldenrod solid;
-  height: 30px;
-  width: 30px;
+  background-image: url("../public/images/owl.png");
+  background-size: cover;
+  border: 2px black solid;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   position: absolute;
   z-index: 5;
+}
+
+.circleAnimate {
+  animation: circleFade 6s forwards;
+}
+@keyframes circleFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .backgroundSquares {
   height: 20px;
@@ -217,10 +232,15 @@
   color: black !important;
   margin-top: -40px;
   width: 867px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .subTextPoint {
   width: 67px;
+}
+.mobileCircle {
+  position: absolute;
+  bottom: 50px;
+  left: 409px;
 }
 @media (max-width: 320px) {
   .unmovingTextContainer {
@@ -238,15 +258,21 @@
     margin-left: 10px;
     font-size: 60px;
   }
+  .mobileCircle {
+    position: absolute;
+    bottom: -5px;
+    left: 130px;
+  }
+  .circle {
+    display: ;
+  }
   .image img {
     max-height: 130px;
   }
   .image {
     bottom: -6px;
   }
-  .circle {
-    display: none;
-  }
+
   .letter6 {
     margin-right: 20px;
   }

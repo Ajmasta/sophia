@@ -1,14 +1,14 @@
-import styles from "./textPicturePanel.module.css"
+import styles from "./webPanel.module.css"
 import Image from 'next/image'
 import Head from "next/head"
-const TextPicturePanel=({text,picture}) =>{ 
+const WebPanel=({text,picture}) =>{ 
 
 
 
     return ( 
         <>
 
-        <div className={styles.spacer}></div>
+        
         <div className={styles.container}>
         
             <div className={styles.pictureContainer}> 
@@ -18,21 +18,25 @@ const TextPicturePanel=({text,picture}) =>{
 
             </div>
             <div className={styles.textContainer}> 
-            <h2 className={styles.title}> Web Design</h2>
+            <h2 className={styles.title}> Web Development</h2>
+            <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
-                <li className={styles.listElement}>Websites from scratch</li>
-                <li className={styles.listElement}>Wordpress websites</li>
+                <li className={styles.listElement}> Full-stack web development</li>
                 <li className={styles.listElement}>Progressive Web Apps</li>
                 <li className={styles.listElement}>React-native apps</li>
+                <li className={styles.listElement}>Landing Pages</li>
+                <li className={styles.listElement}>Wordpress websites</li>
+                
                 </ul>
+            <p className={styles.description}> We believe in the importance of aesthetics, user-friendliness and business-oriented practices for websites. Our team will build future-proof websites and apps that will represent and enhance your brand.</p>
+            </div>
                 <button className={styles.button}>LEARN MORE</button>
             </div>
            
         
         </div>
-        <div className={styles.spacer}></div>
         </>
     )
 }
 
-export default TextPicturePanel
+export default WebPanel

@@ -9,25 +9,19 @@ const FirstPanel = () => {
     let timeout = ""
     const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Social Media","Workflow optimization","Financial advising"])
     const mobile = useMediaQuery("(max-width:800px)")
+    const [owlArray,setOwlArray] = useState([])
     console.log(mobile,"mobile")
+    
     useEffect(()=>{
-       
        requestAnimationFrame(animateFunction)
-
        const root = document.querySelector(":root") 
-       
        const width = document.getElementById("letterContainer").offsetWidth
-       
        if (width>100){
        root.style.setProperty("--sophiaWidth",(width-85.5) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85.5)+"px")
        }
-      
-      
     },[subTextArray])
 
-  
-  
     const animateFunction = () => {
                
                 setTimeout(()=>{
@@ -46,6 +40,11 @@ const FirstPanel = () => {
 
     }
 
+    const handleMouseClick= (e) => {
+        const leftPosition = `${e.clientX}px`
+        const topPosition = `${e.clientY+scrollY}px`
+        setOwlArray([...owlArray,{leftPosition,topPosition}])
+    }
     const handleMouseEnterLetter = (e) => { 
         //e.target.style.color = "black"
 
@@ -63,11 +62,13 @@ const handleMouseEnter = (e) => {
         <>
         <Head>
             <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Philosopher:wght@700&family=Sofia&family=Spectral:wght@500&display=swap" rel="stylesheet" />        </Head>
-        <div onMouseMove={(e)=>handleMouseMove(e)} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
+            <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Philosopher:wght@700&family=Sofia&family=Spectral:wght@500&display=swap" rel="stylesheet" />     
+        </Head>
+        <div onMouseMove={(e)=>handleMouseMove(e)} onClick={handleMouseClick} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
         <div id="circleCursor" className={styles.circle} />
-        
+        {owlArray.map(owl=><div className={`${styles.circle} ${styles.circleAnimate}`} style={{position:"absolute",top:owl.topPosition, left:owl.leftPosition}}/>)}
         <div className={styles.upperContainer}>
+            <div className={`${styles.circle} ${styles.mobileCircle}`} ></div>
             <div className={styles.topBar}>
             <div className={styles.topBarBullet} ></div>
             </div>
@@ -92,8 +93,8 @@ const handleMouseEnter = (e) => {
         {/* one stop*/}
         <div className={styles.horizontalTextContainer}>
             {subTextArray.map((subtext,i)=>{
-                if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}>  {mobile? subtext + "|": subtext + " |"} </p>
-                if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext} {mobile? "":"|"}  </p>
+                if (i===0) return <> <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}>  {subtext}  </p> <p className={`${styles.subText} ${styles.subText0Animate} `}> | </p></>
+                if (i===1) return <> <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}   </p> {mobile? "": <p className={`${styles.subText} ${styles.subText1Animate} `}> | </p>}</>
                 if (i===2 &&!mobile) return <p key={subtext}  id={styles.subText2}  className={`${styles.subText} ${styles.subText2Animate}  `}>  {subtext}  </p>
             })}
         </div>
