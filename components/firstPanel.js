@@ -2,11 +2,14 @@ import Head from "next/head"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from "./firstPanel.module.css"
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
     let timeout = ""
-    const [subTextArray,setSubTextArray]= useState(["Business consulting. ","Web development. ","Workflow optimization. ","Financial advising. "])
-    
+    const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Workflow optimization","Financial advising"])
+    const mobile = useMediaQuery("(max-width:800px)")
+    console.log(mobile,"mobile")
     useEffect(()=>{
        
        requestAnimationFrame(animateFunction)
@@ -84,13 +87,12 @@ const handleMouseEnter = (e) => {
         <div className={styles.subTextContainer}>
         {/* one stop*/}
         <div className={styles.horizontalTextContainer}>
-        {subTextArray.map((subtext,i)=>{
-            if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}> {subtext}  </p>
-            if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}  </p>
-    
-        })}
+            {subTextArray.map((subtext,i)=>{
+                if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}>  {mobile? subtext + "|": subtext + " |"} </p>
+                if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext} {mobile? "":"|"}  </p>
+                if (i===2 &&!mobile) return <p key={subtext}  id={styles.subText2}  className={`${styles.subText} ${styles.subText2Animate}  `}>  {subtext}  </p>
+            })}
         </div>
-        {/* vertical text*/}
         </div>
         
      

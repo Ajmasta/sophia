@@ -195,7 +195,7 @@
   font-size: 25px;
   opacity: 0;
 }
-#subText3 {
+#subText0 {
   opacity: 0;
   animation-fill-mode: forwards;
 }
@@ -207,7 +207,7 @@
   animation: horizontalSubText 6s infinite;
 }
 .subText2Animate {
-  animation: subText2Leave 4s infinite;
+  animation: horizontalSubText 6s infinite;
 }
 .subText3Animate {
   animation: subText3Leave 4s infinite;
@@ -217,7 +217,10 @@
   color: black !important;
   margin-top: -40px;
   width: 867px;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.subTextPoint {
+  width: 67px;
 }
 @media (max-width: 320px) {
   .unmovingTextContainer {
@@ -329,7 +332,7 @@
     animation-delay: 0s;
   }
   .subText2Animate {
-    animation: subText2LeaveMobile 4s infinite;
+    animation: horizontalSubText 6s infinite;
   }
   .subText3Animate {
     animation: subText3LeaveMobile 4s infinite;
