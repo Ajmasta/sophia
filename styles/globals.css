@@ -16,4 +16,6 @@ a {
 }
 :root {
   --bulletColors: white;
+  --sophiaWidth: 222px;
+  --sophiaWidthN: -222px;
 }

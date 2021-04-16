@@ -233,7 +233,6 @@
   .letterContainer {
     max-height: 150px;
     min-height: 0px;
-    max-width: 307px;
   }
   .subText {
     font-size: 10px;
@@ -307,13 +306,13 @@
       transform: translateX(0px);
     }
     50% {
-      transform: translateX(-221px);
+      transform: translateX(var(--sophiaWidthN));
 
       background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
-      transform: translateX(-221px);
+      transform: translateX(var(--sophiaWidthN));
     }
     100% {
       transform: translateX(0);
@@ -329,13 +328,13 @@
       transform: translateX(0px);
     }
     50% {
-      transform: translateX(221px);
+      transform: translateX(var(--sophiaWidth));
 
       background-color: white;
       box-shadow: 5px 5px 5px black;
     }
     75% {
-      transform: translateX(221px);
+      transform: translateX(var(--sophiaWidth));
     }
     100% {
       transform: translateX(0);

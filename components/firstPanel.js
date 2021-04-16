@@ -8,11 +8,21 @@ const FirstPanel = () => {
     const [subTextArray,setSubTextArray]= useState(["Business consulting.","web development.","workflow optimization.","financial advising."])
     const [animate,setAnimate] = useState(true)
     useEffect(()=>{
-        console.log("useEffect",animate)
+       
        if (animate) requestAnimationFrame(animateFunction)
 
     },[subTextArray])
+    useEffect(()=>{
+       const root = document.querySelector(":root") 
+       
+       const width = document.getElementById("letterContainer").offsetWidth
+       console.log(width)
+       root.style.setProperty("--sophiaWidth",(width-85) +"px")
+       root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
+       const rootStyles = getComputedStyle(root)
+       console.log(rootStyles)
 
+    },[])
     const animateFunction = () => {
                
                 setTimeout(()=>{
@@ -63,7 +73,7 @@ const handleMouseEnter = (e) => {
             <div className={styles.topBarBullet} ></div>
             </div>
       
-            <div className={styles.letterContainer}>
+            <div id={"letterContainer"} className={styles.letterContainer}>
                 <div className={styles.leftBar}>
                     <div className={styles.leftBarBullet} ></div>
                 </div>
