@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 300px;
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+}
+
+.bigText {
+  margin-top: 0;
+
+  font-weight: 800;
+  font-size: 100px;
+  margin-bottom: 0;
+  letter-spacing: 0;
+  color: #265faa;
+  font-family: "Source Sans Pro", Helvetica, Arial, Lucida, sans-serif;
+}
+.text {
+  width: 80%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 200px;
+  }
+}
