@@ -24,7 +24,7 @@ const FirstPanel = () => {
        }
        if(!mobile && width < 400){
         root.style.setProperty("--sophiaWidth","783px")
-        root.style.setProperty("--sophiaWidthN","783px")
+        root.style.setProperty("--sophiaWidthN","-783px")
        }
     },[subTextArray])
   
