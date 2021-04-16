@@ -1,6 +1,6 @@
 .container {
   min-height: 600px;
-  height: 900px;
+  height: 700px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -19,7 +19,7 @@
 }
 .image {
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   z-index: 40000;
 }
 .letter1,
@@ -37,7 +37,7 @@
   text-shadow: 1px 1px 3px black;
   background-color: transparent;
 }
-1 .letter2 {
+.letter2 {
   animation-delay: 1s;
 }
 .letter3 {
@@ -54,11 +54,12 @@
   margin-right: 40px;
 }
 .upperContainer {
-  height: 550px;
+  margin-top: 100px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
+  justify-items: center;
 }
 .letterContainer {
   background-color: transparent;
@@ -66,6 +67,7 @@
   max-height: 300px;
   display: flex;
   align-items: center;
+
   box-shadow: 1px 1px 35px black;
 }
 .bottomBar {
@@ -127,10 +129,10 @@
 .subTextContainer {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   height: 275px;
-  color: white;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-items: flex-start;
 }
 
 .movingTextContainer {
@@ -154,11 +156,12 @@
 }
 .contactContainer {
   z-index: 100;
+  position: absolute;
+  bottom: -60px;
 }
 .contactButton {
-  position: absolute;
-  bottom: -50px;
-  left: 100px;
+  align-self: center;
+
   background: grey;
   padding: 20px;
   font-size: 25px;
@@ -189,7 +192,8 @@
   font-weight: 600;
 }
 #subText1 {
-  font-size: 30px;
+  font-size: 25px;
+  opacity: 0;
 }
 #subText3 {
   opacity: 0;
@@ -197,16 +201,21 @@
 }
 
 .subText0Animate {
-  animation: subText0Leave 4s infinite;
+  animation: horizontalSubText 6s infinite;
 }
 .subText1Animate {
-  animation: subText1Leave 4s infinite;
+  animation: horizontalSubText 6s infinite;
 }
 .subText2Animate {
   animation: subText2Leave 4s infinite;
 }
 .subText3Animate {
   animation: subText3Leave 4s infinite;
+}
+.horizontalTextContainer {
+  display: flex;
+  color: black !important;
+  margin-top: -30px;
 }
 @media (max-width: 320px) {
   .unmovingTextContainer {
@@ -223,6 +232,12 @@
     color: black;
     margin-left: 10px;
     font-size: 60px;
+  }
+  .image img {
+    max-height: 130px;
+  }
+  .image {
+    bottom: -7px;
   }
   .circle {
     display: none;
@@ -254,12 +269,13 @@
     box-shadow: none;
   }
   .subText {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 800;
+    letter-spacing: 3px;
   }
   #subText1 {
-    font-size: 10px;
     opacity: 0;
+    font-size: 13px;
   }
 
   .unmovingTextContainer {
@@ -284,7 +300,8 @@
     padding: 15px;
   }
   .contactContainer {
-    margin-bottom: -100px;
+    position: absolute;
+    bottom: -52px;
   }
   .topBarBullet {
     animation: topBulletMobile 12s infinite;
@@ -391,17 +408,6 @@
     }
   }
 
-  @keyframes horizontalSubText {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
   @keyframes subText0LeaveMobile {
     0% {
       transform: translateY(0px);
@@ -461,7 +467,17 @@
     }
   }
 }
-
+@keyframes horizontalSubText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes rightBullet {
   0% {
     transform: translateY(0px);

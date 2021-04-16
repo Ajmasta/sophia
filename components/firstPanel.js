@@ -5,7 +5,7 @@ import styles from "./firstPanel.module.css"
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
     let timeout = ""
-    const [subTextArray,setSubTextArray]= useState(["Business consulting. ","Web development. ","Workflow optimization. ","financial advising. "])
+    const [subTextArray,setSubTextArray]= useState(["Business consulting. ","Web development. ","Workflow optimization. ","Financial advising. "])
     
     useEffect(()=>{
        
@@ -87,18 +87,18 @@ const handleMouseEnter = (e) => {
         {subTextArray.map((subtext,i)=>{
             if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}> {subtext}  </p>
             if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}  </p>
-            
-
+    
         })}
         </div>
         {/* vertical text*/}
         </div>
         
+     
+        <div className={styles.image} >
+        <Image width={131} height={212} src="/images/owl.png" />
+        </div>
         <div className={styles.contactContainer}>
             <button className={styles.contactButton}>Contact us</button>
-        </div>
-        <div className={styles.image} >
-        <Image width={80} height={130} src="/images/owl.png" />
         </div>
     </div>
     </>
