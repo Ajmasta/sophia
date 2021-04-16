@@ -7,7 +7,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
     let timeout = ""
-    const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Workflow optimization","Financial advising"])
+    const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Social Media","Workflow optimization","Financial advising"])
     const mobile = useMediaQuery("(max-width:800px)")
     console.log(mobile,"mobile")
     useEffect(()=>{
@@ -21,6 +21,10 @@ const FirstPanel = () => {
        if (width>100){
        root.style.setProperty("--sophiaWidth",(width-85.5) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85.5)+"px")
+       }
+       if(!mobile && width < 400){
+        root.style.setProperty("--sophiaWidth","783px")
+        root.style.setProperty("--sophiaWidthN","783px")
        }
     },[subTextArray])
   
