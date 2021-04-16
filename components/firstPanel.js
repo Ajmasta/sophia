@@ -11,12 +11,18 @@ const FirstPanel = () => {
        
        if (animate) requestAnimationFrame(animateFunction)
 
+       const root = document.querySelector(":root") 
+       
+       const width = document.getElementById("letterContainer").offsetWidth
+       root.style.setProperty("--sophiaWidth",(width-85) +"px")
+       root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
+       
     },[subTextArray])
     useEffect(()=>{
        const root = document.querySelector(":root") 
        
        const width = document.getElementById("letterContainer").offsetWidth
-       console.log(width)
+      
        root.style.setProperty("--sophiaWidth",(width-85) +"px")
        root.style.setProperty("--sophiaWidthN",(-width+85)+"px")
 
