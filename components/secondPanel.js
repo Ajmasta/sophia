@@ -17,7 +17,7 @@ const SecondPanel = () => {
             bgStyle={{background:"center"}}>
                 <div className={styles.textContainer}>
                 <h1 className={styles.title}>Are you looking to grow your business?</h1>
-                <h2 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h2>
+                <h3 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h3>
 
                 <p className={styles.text}>
                     Through our knowledge and passion for finance and technology, we want to help you build up your company to its fullest potential. No need to hire multiple companies anymore. We take care of everything for you.
@@ -30,7 +30,7 @@ const SecondPanel = () => {
                     </div>
                     <div className={styles.iconSingleContainer}>
                         <MonetizationOnIcon  className={styles.icon} />
-                        <p>Digital Marketing Strategies </p>
+                        <p>Digital Marketing  </p>
                     </div>
                     <div className={styles.iconSingleContainer}>
                         <BusinessCenterIcon className={styles.icon}/>

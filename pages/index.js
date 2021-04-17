@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import BusinessPanel from '../components/businessPanel'
 import FirstPanel from '../components/firstPanel'
+import FourthPanel from '../components/fourthPanel'
 import HoverButtonPanel from '../components/hoverButtonPanel'
 import NavBar from '../components/navbar'
 import NumberedListContainer from '../components/numberedListContainer'
@@ -31,7 +32,9 @@ export default function Home() {
      
       <BusinessPanel picture={"/images/business.jpg"}  />
       
-     <ParallaxPanel />
+     
+     <FourthPanel />
+  
  
     </div>
     </>

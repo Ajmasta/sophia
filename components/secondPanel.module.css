@@ -7,6 +7,7 @@
   align-content: center;
   background-color: black;
   width: 100%;
+  padding-bottom: 50px;
 }
 .title {
   width: 100%;
@@ -40,4 +41,22 @@
 .icon {
   width: 100px !important;
   height: 50px !important;
+}
+
+@media (max-width: 800px) {
+  .textContainer {
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+  .title {
+    width: 90%;
+  }
+  .iconContainer {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .text {
+    width: 80%;
+  }
 }
