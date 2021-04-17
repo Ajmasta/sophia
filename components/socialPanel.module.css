@@ -9,51 +9,26 @@
     U+FEFF, U+FFFD;
 }
 .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
   width: 100%;
-  background-image: url("../public/images/blackPaper.png");
-  background-position: 50% 0%;
+  background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+
+  background-size: cover;
+
   min-height: 700px;
   flex-wrap: wrap;
   background-color: black;
   font-family: "Poppins", Lucida Sans Unicode, Lucida Grande, sans-serif;
-  color: white;
+  color: black;
   padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  flex-wrap: wrap;
 }
-.infoPicker {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
 
-  margin-left: auto;
-}
-.infoElement {
-  color: silver;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-.infoElementActive {
-  border-bottom: 1px white solid;
-  color: white;
-}
-.infoDisplay {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  flex: 5;
-}
 .pictureContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-content: center;
   flex: 1;
   width: 100%;
@@ -65,20 +40,20 @@
 .pictureBackgroundBlack {
   position: absolute;
   top: -40px;
-  right: 51px;
+  left: 51px;
   height: 100%;
   width: 100%;
   max-width: 600px;
   max-height: 500px;
-  background-color: white;
+  background-color: black;
   z-index: -1;
-  box-shadow: -5px -5px 5px black;
-  opacity: 0.8;
+  box-shadow: -5px -5px 20px black;
+  opacity: 0.9;
 }
 .pictureBackgroundGold {
   position: absolute;
   top: -20px;
-  right: 31px;
+  left: 31px;
   height: 100%;
   width: 100%;
   max-width: 600px;
@@ -91,7 +66,7 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: center;
   align-items: center;
   height: 100%;
   flex: 1;
@@ -133,15 +108,6 @@
   .container {
     padding-bottom: 25px;
     position: relative;
-    min-height: 865px;
-  }
-  .infoDisplay {
-    flex-direction: column;
-  }
-  .infoPicker {
-    width: 90%;
-    margin: auto;
-    text-align: center;
   }
   .pictureContainer {
     min-width: 100%;
@@ -154,15 +120,7 @@
     flex-direction: column-reverse;
     text-align: left;
     align-content: center;
-    align-items: center;
     padding-bottom: 20px;
-  }
-  .listContainer {
-    display: flex;
-    flex-direction: column;
-    max-height: 125px;
-    max-width: 300px;
-    flex-wrap: wrap;
   }
   .title {
     text-align: center;
@@ -179,18 +137,16 @@
     margin: 0;
     text-align: center;
   }
-  .pictureContainer {
-    min-height: 240px;
-  }
   .pictureBackgroundBlack {
-    display: none;
+    top: -20px;
+    right: auto;
+    max-width: 94%;
   }
 
   .pictureBackgroundGold {
     top: -10px;
-    right: 0px;
-    width: 90%;
-    margin-right: 5px;
+    right: auto;
+    max-width: 94%;
     box-shadow: none;
   }
   .button {

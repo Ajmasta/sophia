@@ -3,22 +3,30 @@ import FirstPanel from '../components/firstPanel'
 import HoverButtonPanel from '../components/hoverButtonPanel'
 import NavBar from '../components/navbar'
 import NumberedListContainer from '../components/numberedListContainer'
+import SecondPanel from '../components/secondPanel'
+import SocialPanel from '../components/socialPanel'
 import TextPicturePanel from '../components/textPicturePanel'
 import WebPanel from '../components/webPanel'
 import styles from '../styles/Home.module.css'
 
+
 export default function Home() {
   return (
     <>
-    <NavBar />
-    <FirstPanel />
-    <div className={styles.container}>
-      <Head>
-        <title>Digital Solutions</title>
+    <Head>
+        <title>SOPHIA</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+    </Head>
+    <NavBar />
+
+    
+    
+    <div className={styles.container}>
+    <FirstPanel />
+    <SecondPanel />
       <WebPanel picture={"/images/webDesign.jpg"} 
-      text={"we offer digital solutions that will help you expand your business, be more efficient, and gain a strong digital presence"}/>
+      />
+     <SecondPanel />
     <HoverButtonPanel />
     <NumberedListContainer />
     </div>

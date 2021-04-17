@@ -68,7 +68,7 @@ const handleMouseEnter = (e) => {
         </Head>
         <div id="containerFirstPanel" onMouseMove={(e)=>handleMouseMove(e)} onClick={handleMouseClick} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
         <div id="circleCursor" className={styles.circleCursor} />
-        {owlArray.map(owl=><div className={`${styles.circleLogo} ${styles.circleAnimate}`} style={{position:"absolute",top:owl.topPosition, left:owl.leftPosition}}/>)}
+        {owlArray.map((owl,i)=><div key={`owl${i}`} className={`${styles.circleLogo} ${styles.circleAnimate}`} style={{position:"absolute",top:owl.topPosition, left:owl.leftPosition}}/>)}
         <div className={styles.upperContainer}>
             <div className={`${styles.circleLogo} ${styles.mobileCircle}`} ></div>
             <div className={styles.topBar}>

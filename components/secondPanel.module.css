@@ -1,0 +1,15 @@
+.content {
+  border: 2px solid grey;
+  height: 200px;
+}
+.parallax {
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+}
