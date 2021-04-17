@@ -12,7 +12,7 @@
   background-color: white;
   cursor: none;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  background-image: url("/images/whitePaper.jpg");
   background-size: cover;
 
   font-family: "Times New Roman", Times, serif;
@@ -20,7 +20,7 @@
 }
 .image {
   position: absolute;
-  bottom: -10px;
+  bottom: -7px;
   z-index: 40000;
 }
 .letter1,

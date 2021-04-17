@@ -104,7 +104,7 @@ const handleMouseEnter = (e) => {
         
      
         <div className={styles.image} >
-        <Image width={131} height={212} src="/images/owl.png" />
+        <Image width={100} height={162} src="/images/owl.png" />
         </div>
         <div className={styles.contactContainer}>
             <button className={styles.contactButton}>Contact us</button>
