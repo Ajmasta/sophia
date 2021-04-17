@@ -1,0 +1,12 @@
+.content {
+  border: 2px solid grey;
+  height: 200px;
+}
+.parallax {
+  min-height: 200px;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

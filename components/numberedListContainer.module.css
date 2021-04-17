@@ -4,6 +4,7 @@
   direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  color: white;
 }
 @media (max-width: 600px) {
   .container {

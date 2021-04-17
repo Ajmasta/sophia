@@ -1,15 +1,43 @@
-.content {
-  border: 2px solid grey;
-  height: 200px;
+.container {
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  background-color: black;
+  width: 100%;
 }
-.parallax {
-  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  min-height: 200px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.title {
+  width: 100%;
 }
-
-@media only screen and (max-device-width: 1366px) {
+.text {
+  width: 50%;
+}
+.subTitle {
+  width: 90%;
+}
+.textContainer {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+.iconContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.icon {
+  width: 100px !important;
+  height: 50px !important;
 }
