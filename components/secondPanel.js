@@ -1,5 +1,4 @@
 import { Parallax,Background} from "react-parallax"
-import NumberedListContainer from "./numberedListContainer"
 import styles from "./secondPanel.module.css"
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import LanguageIcon from '@material-ui/icons/Language';
