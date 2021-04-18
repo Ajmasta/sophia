@@ -1,8 +1,11 @@
+import { useMediaQuery } from "@material-ui/core"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from "./navbar.module.css"
 
 const NavBar = ({}) => { 
-const elements = ["Home", "About","Contact Us"]
+const mobile = useMediaQuery("(max-width:800px)")
+const elements = ["Solutions","Portfolio", "Blog", "About Us"]
 const[scroll,setScroll] = useState(false)
 const checkScroll = () => window.scrollY>0? setScroll(true):setScroll(false)
   useEffect(()=>{
@@ -11,7 +14,9 @@ const checkScroll = () => window.scrollY>0? setScroll(true):setScroll(false)
     })
 return(
     <div className={scroll? styles.containerScrolled:styles.container}>
-        {elements.map((element,i)=> <p key={`element${i}`}> {element}</p>)}
+    {mobile? "":scroll? <div className={styles.circleLogo} />:<div className={styles.circleLogoBlack} />}
+
+        {elements.map((element,i)=> <p key={`element${i}`} className={styles.navBarElements}> {element}</p>)}
     </div>
 
 )

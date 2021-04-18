@@ -1,8 +1,9 @@
-import { Parallax } from "react-parallax"
+import { Parallax,Background } from "react-parallax"
 import NumberedListContainer from "./numberedListContainer"
 import styles from "./fourthPanel.module.css"
 import TextField from '@material-ui/core/TextField';
 import { Button } from "@material-ui/core";
+import Image from "next/image";
 
 const FourthPanel = () => { 
 
@@ -10,11 +11,15 @@ const FourthPanel = () => {
     return( 
             <Parallax className={styles.container}
             
-            bgImage={"/images/montrealNight2.jpg"} 
-            bgImageAlt="Montreal at Night"
-            bgImageStyle={{height:"150%"}}
+          
             strength={500}
-            bgStyle={{backgroundSize:"contain"}}>
+            
+                >
+
+                <Background bgClassName={styles.background}>    
+                <Image alt="Montreal at Night" layout="fixed" width={2000} height={1333} src="/images/montrealNight2.jpg" />
+            
+            </Background>
                 <div className={styles.formContainer}>
                 <div className={styles.formTitle}>Contact us</div>
                     <TextField className={`${styles.inputField} ${styles.inputName}`} label="First Name" /> 

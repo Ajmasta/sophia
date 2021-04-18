@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-display: swap;
 }
 
 a {
@@ -20,4 +21,8 @@ a {
   --sophiaWidth: 222px;
   --sophiaWidthN: -222px;
   --sophiaBarColors: transparent;
+}
+.react-parallax-background-children {
+  min-width: 100% !important;
+  min-height: 100% !important;
 }

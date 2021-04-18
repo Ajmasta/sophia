@@ -1,21 +1,26 @@
-import { Parallax } from "react-parallax"
+import { Parallax,Background} from "react-parallax"
 import NumberedListContainer from "./numberedListContainer"
 import styles from "./secondPanel.module.css"
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import LanguageIcon from '@material-ui/icons/Language';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import AssessmentIcon from '@material-ui/icons/Assessment';
+import Image from "next/image";
 const SecondPanel = () => { 
 
 
     return( 
             <Parallax className={styles.container}
             
-            bgImage={"https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80"} 
            
             strength={500}
             bgStyle={{background:"center"}}>
-                <div className={styles.textContainer}>
+
+            <Background bgClassName={styles.background}>
+                <Image layout="fixed" width={2299} height={1527} src="/images/buildingBackground2.jpg" />
+            
+            </Background>
+            <div className={styles.textContainer}>
                 <h1 className={styles.title}>Are you looking to grow your business?</h1>
                 <h3 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h3>
 

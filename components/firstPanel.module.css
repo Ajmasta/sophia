@@ -30,7 +30,7 @@
 .letter5,
 .letter6 {
   color: black;
-  font-size: 160px;
+  font-size: 130px;
   margin-left: 40px;
   transition: 0.4s all;
   transition-timing-function: cubic-bezier(0.2, -0.9, 0.5, 0);
@@ -55,7 +55,7 @@
   margin-right: 40px;
 }
 .upperContainer {
-  margin-top: 100px;
+  margin-top: 130px;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -577,12 +577,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(-783px);
+    transform: translateX(-674px);
 
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(-783px);
+    transform: translateX(-674px);
   }
   100% {
     transform: translateX(0);
@@ -598,12 +598,12 @@
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(783px);
+    transform: translateX(674px);
 
     box-shadow: 5px 5px 5px black;
   }
   75% {
-    transform: translateX(783px);
+    transform: translateX(674px);
   }
   100% {
     transform: translateX(0);
