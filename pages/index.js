@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charSet="utf-8" />
         <meta name="twitter:card" content="summary" key="twcard" />
-        <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
+        
 
         {/* Open Graph */}
         <meta property="og:url" content="https://sophia-ajmasta.vercel.app/" key="ogurl" />
