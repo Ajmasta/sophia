@@ -63,8 +63,7 @@ const handleMouseEnter = (e) => {
     return(
         <>
         <Head>
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Philosopher:wght@700&family=Sofia&family=Spectral:wght@500&display=swap" rel="stylesheet" />     
+
         </Head>
         <div id="containerFirstPanel" onMouseMove={(e)=>handleMouseMove(e)} onClick={handleMouseClick} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className={styles.container}>
         <div id="circleCursor" className={styles.circleCursor} />
