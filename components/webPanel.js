@@ -2,6 +2,7 @@ import styles from "./webPanel.module.css"
 import Image from 'next/image'
 import Head from "next/head"
 import { useState } from "react"
+
 const WebPanel=({text,picture}) =>{ 
 const [active,setActive] = useState("1")
 

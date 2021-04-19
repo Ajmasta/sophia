@@ -16,7 +16,7 @@ const SecondPanel = () => {
             bgStyle={{background:"center"}}>
 
             <Background bgClassName={styles.background}>
-                <Image layout="fixed" width={2299} height={1527} src="/images/buildingBackground2.jpg" />
+                <Image layout="fixed" width={2299} height={1527} alt="building skyline" src="/images/buildingBackground2.jpg" />
             
             </Background>
             <div className={styles.textContainer}>

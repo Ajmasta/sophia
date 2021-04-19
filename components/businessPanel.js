@@ -1,15 +1,23 @@
 import styles from "./businessPanel.module.css"
 import Image from 'next/image'
 import Head from "next/head"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import VisibilitySensor from 'react-visibility-sensor';
+
 
 const BusinessPanel=({text,picture}) =>{ 
 const [active,setActive] = useState("1")
-
+const [visible,setVisible] = useState(false)
 const handleClick = (e) => {
     setActive(e.target.id)
 }
+useEffect(()=>{
 
+},[])
+const visibleFunc=(isVisible)=>{
+    console.log(isVisible)
+
+}
     return ( 
         <>
 
@@ -17,14 +25,15 @@ const handleClick = (e) => {
         <div className={styles.container}>
         
         <div className={styles.infoDisplay}>
+        
             <div className={styles.pictureContainer}> 
                 <Image className={styles.picture} width={600} height={400} src={picture} alt="cute cat" />
                 <div className={styles.pictureBackgroundBlack}></div>
                 <div className={styles.pictureBackgroundGold}></div>
 
             </div>
-          
             <div className={styles.textContainer}> 
+            <VisibilitySensor onChange={visibleFunc}>
             <div className={styles.infoPicker}>
             <p onClick={handleClick} id="1" className={active==="1"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
             Business Strategies
@@ -36,6 +45,8 @@ const handleClick = (e) => {
             Merger and acquisition
             </p>
         </div>
+                    </VisibilitySensor>
+
             {active==="1"?
             <>
             <h2 className={styles.title}> Business Strategies</h2>
@@ -90,6 +101,7 @@ const handleClick = (e) => {
            
             </div>
         </div>
+        
         </>
     )
 }

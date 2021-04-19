@@ -26,3 +26,12 @@ a {
   min-width: 100% !important;
   min-height: 100% !important;
 }
+.endScroll {
+  width: 100%;
+  bottom: 50%;
+  position: absolute;
+  background-color: black;
+  background-image: url();
+  z-index: 9000000;
+  transition: height 1s ease-in-out;
+}

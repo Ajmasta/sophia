@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import AboutUs from '../components/aboutUs'
 import BusinessPanel from '../components/businessPanel'
 import FirstPanel from '../components/firstPanel'
 import FourthPanel from '../components/fourthPanel'
@@ -40,8 +41,8 @@ export default function Home() {
      
       <BusinessPanel picture={"/images/business.jpg"}  />
       
-     
-     <FourthPanel />
+     <AboutUs />
+    
   
  
     </div>

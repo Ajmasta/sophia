@@ -2,6 +2,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2)
     format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -122,12 +123,7 @@
   border: none;
   font-weight: 600;
 }
-.spacer {
-  height: 100px;
-  width: 100%;
-  background-color: #ededed;
-  background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
-}
+
 @media (max-width: 800px) {
   .container {
     padding-bottom: 25px;
