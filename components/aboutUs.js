@@ -15,6 +15,7 @@ const AboutUs = () => {
    
             const handleVisible=(isVisible)=>{
                 console.log(window.innerHeight)
+                setVisible(isVisible)
                 isVisible? setHeight(window.innerHeight):setHeight(0)
             }
     return(
