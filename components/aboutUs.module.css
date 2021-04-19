@@ -19,23 +19,18 @@
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   z-index: 9000020;
+  background-image: url("../public/images/blackPaper.png");
 
   bottom: 0;
   left: 0;
   opacity: 0;
   position: absolute;
 }
-.anchor::after {
-  content: "test";
-  color: white;
-  width: 100px;
-  min-height: 700px;
-  z-index: 9000001;
-}
+
 .margin {
   min-height: 500px;
   width: 100%;
-  background-color: black;
+  background-image: url("../public/images/blackPaper.png");
   display: flex;
   align-items: center;
   justify-items: center;
@@ -44,10 +39,13 @@
   min-height: 0px;
 }
 .containerFade {
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
 }
 @keyframes fadeIn {
   0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   100% {
@@ -58,11 +56,12 @@
 .placeholder {
   min-height: 500px;
   transition: height 0.6s ease-in-out;
+  background-image: url("../public/images/blackPaper.png");
 }
 .title {
   position: absolute;
-  top: 0px;
-  left: 0;
+  top: 50px;
+  left: 50px;
   font-size: 40px;
   background-color: black;
   color: white;
@@ -76,16 +75,48 @@
 }
 .submitButton {
   background-color: #fcaf3b !important;
-  bottom: -70px;
-  width: 257px;
+
+  width: 350px;
   height: 100px;
   position: absolute;
+  left: auto;
+  top: auto;
   border: none;
   font-weight: 700 !important;
   font-family: Arial, Helvetica, sans-serif !important;
   box-shadow: 5px 5px 20px black;
+  margin-top: 100px;
 }
-
+.submitButton:nth-child(2n) {
+  animation: moveLeft 6s forwards;
+  margin-top: 20px;
+}
+.submitButton:nth-child(2n-1) {
+  animation: moveRight 6s forwards;
+  margin-top: 20px;
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-80px);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(80px);
+  }
+}
 .text {
   position: absolute;
   bottom: 0px;
@@ -141,18 +172,19 @@
 }
 
 @media (max-width: 1235px) {
-  .container {
-    height: 950px;
+  .submitButton {
+    width: 180px;
+    height: 50px;
   }
+
   .text {
     flex-wrap: wrap;
     width: 95%;
     padding: 0;
   }
   .title {
-    position: static;
     width: 80%;
-    margin-bottom: -10px;
+    height: 70px;
     z-index: 5;
     border-radius: 15px;
   }

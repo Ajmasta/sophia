@@ -34,7 +34,7 @@ const AboutUs = () => {
             <div className={styles.title}>
                 <p> About Us </p>
             </div>
-        <div className={styles.text}>
+        {/*<div className={styles.text}>
             <div className={styles.subTextLeftContainer}>
                     <p className={styles.subTextTitle}>Our Vision</p>
                 <p className={styles.subTextLeft}> We are a team comprised of web and business experts. We realized that to build a succesful website,
@@ -50,10 +50,16 @@ const AboutUs = () => {
                 It seemed logical for us to combine both web development and business consulting to help companies create financial and business plans and also to help them put those plans into practice through a strong digital strategy.</p>
                 </div>
         
-        </div>
+        </div>*/}
 
 
         <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+
+        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+
+        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+
 
         </div>
         </div>

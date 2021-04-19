@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import AboutUs from '../components/aboutUs'
 import BusinessPanel from '../components/businessPanel'
 import FirstPanel from '../components/firstPanel'
@@ -11,6 +12,9 @@ import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
+
+
+ 
   return (
     <>
     <Head>
@@ -34,6 +38,7 @@ export default function Home() {
     
     
     <div className={styles.container}>
+    
     <FirstPanel />
     <SecondPanel />
       <WebPanel picture={"/images/webDesign.jpg"} 

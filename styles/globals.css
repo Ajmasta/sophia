@@ -30,8 +30,7 @@ a {
   width: 100%;
   bottom: 50%;
   position: absolute;
-  background-color: black;
-  background-image: url();
+  background-image: url("../public/images/blackPaper.png");
   z-index: 9000000;
   transition: height 1s ease-in-out;
 }

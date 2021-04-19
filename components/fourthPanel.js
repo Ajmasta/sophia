@@ -16,7 +16,7 @@ const FourthPanel = () => {
                 >
 
                 <Background bgClassName={styles.background}>    
-                <Image alt="Montreal at Night" layout="fixed" width={2000} height={1333} src="/images/montrealNight2.jpg" />
+                <Image priority="true" alt="Montreal at Night" layout="fixed" width={2000} height={1333} src="/images/montrealNight2.jpg" />
             
             </Background>
                 <div className={styles.formContainer}>
