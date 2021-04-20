@@ -2,9 +2,7 @@
 import { Button, TextField } from "@material-ui/core"
 import styles from "./aboutUs.module.css"
 import Link from 'next/link'
-import { Background, Parallax } from "react-parallax"
-import Image from "next/image"
-import { useEffect, useState } from "react"
+import {useState } from "react"
 import AnimateHeight from 'react-animate-height';
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -53,10 +51,10 @@ const AboutUs = () => {
         </div>*/}
 
 
-        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
-        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+        <Link href="contact"><Button className={styles.submitButton}> Start a Project </Button></Link>
+        <Link href="contact"><Button className={styles.submitButton}> Meet Our Team</Button></Link>
 
-        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+        <Link href="contact"><Button className={styles.submitButton}> Learn About Our Process</Button></Link>
 
         <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
 

@@ -123,8 +123,12 @@
   border: none;
   font-weight: 600;
 }
-
-@media (max-width: 800px) {
+@media (min-width: 800px) and (max-width: 1350px) {
+  .pictureBackgroundGold {
+    display: none;
+  }
+}
+@media (max-width: 1350px) {
   .container {
     padding-bottom: 25px;
     position: relative;

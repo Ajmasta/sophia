@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.image {
+  object-fit: cover;
+  min-height: 1800px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 120% !important;
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+  .image {
+    min-height: 150% !important;
+  }
+}

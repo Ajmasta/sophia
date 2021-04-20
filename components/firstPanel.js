@@ -6,7 +6,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
-    let timeout = ""
     const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Social Media","Workflow optimization","Financial advising"])
     const mobile = useMediaQuery("(max-width:800px)")
     const [owlArray,setOwlArray] = useState([])
@@ -116,35 +115,4 @@ const handleMouseEnter = (e) => {
 export default FirstPanel
 
 
-   /* moving letters
-        const letter1 = document.getElementById("letter1")
-        const letter2 = document.getElementById("letter2")
-        const letter3 = document.getElementById("letter3")
-        const letter4 = document.getElementById("letter4")
-        const letter5 = document.getElementById("letter5")
-        const letter6 = document.getElementById("letter6")
-        letter1.style.transform = `translate3d(${e.clientX/12}px,${-e.clientY/18}px,${e.clientY/10}px)`
-        letter2.style.transform = `translate3d(${e.clientX/15}px,${e.clientY/8}px,${e.clientY/10}px)`
-        letter3.style.transform = `translate3d(${e.clientX/12}px,${-e.clientY/18}px,${e.clientY/10}px)`
-        letter4.style.transform = `translate3d(${e.clientX/15}px,${e.clientY/12}px,${e.clientY/10}px)`
-        letter5.style.transform = `translate3d(${e.clientX/12}px,${-e.clientY/18}px,${e.clientY/10}px)`
-        letter6.style.transform = `translate3d(${e.clientX/13}px,${e.clientY/10}px,${e.clientY/10}px)`
-        */
-
-        /*<div className={styles.unmovingTextContainer}>
-        <p> Your one-stop solution for </p>
-        </div>*/
-
-
-        /* 
-                <div className={styles.movingTextContainer}>
-        {subTextArray.map((subtext,i)=>{
-            if (i===0) return <p key={subtext}  id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate}`}> {subtext}</p>
-            if (i===1) return <p key={subtext}  id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}`}> {subtext}</p>
-            if (i===2) return <p key={subtext}  id={styles.subText2}  className={`${styles.subText} ${styles.subText2Animate}`}> {subtext}</p>
-
-        })}
-     <p key={subTextArray[3]}  id={styles.subText3} className={`${styles.subText} ${styles.subText3Animate}`}> {subTextArray[3]}</p>
-     </div>
-        
-        */
+ 

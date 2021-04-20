@@ -127,7 +127,12 @@
   box-shadow: 2px 2px 20px black;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) and (max-width: 1350px) {
+  .pictureBackgroundBlack {
+    display: none;
+  }
+}
+@media (max-width: 1350px) {
   .container {
     padding-bottom: 25px;
     position: relative;

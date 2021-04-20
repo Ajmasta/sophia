@@ -1,25 +1,17 @@
-import { Parallax,Background} from "react-parallax"
 import styles from "./secondPanel.module.css"
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import LanguageIcon from '@material-ui/icons/Language';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import AssessmentIcon from '@material-ui/icons/Assessment';
-import Image from "next/image";
+import ParallaxCustom from "./parallaxCustom";
 const SecondPanel = () => { 
 
 
     return( 
-            <Parallax className={styles.container}
-            
-           
-            strength={500}
-            bgStyle={{background:"center"}}>
-
-            <Background bgClassName={styles.background}>
-                <Image layout="fixed" width={2299} height={1527} alt="building skyline" src="/images/buildingBackground2.jpg" />
-            
-            </Background>
-            <div className={styles.textContainer}>
+        <>
+          
+        <ParallaxCustom className={styles.container} mobileHeight={"900px"} containerHeight={"900px"} imageSource={"/images/buildingBackground2.jpg"}>
+        <div className={styles.textContainer}>
                 <h1 className={styles.title}>Are you looking to grow your business?</h1>
                 <h3 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h3>
 
@@ -46,7 +38,12 @@ const SecondPanel = () => {
                     </div>
                 </div>
                 </div>
-            </Parallax>
+
+
+
+        </ParallaxCustom>
+
+</>
 
     )
 }

@@ -1,8 +1,6 @@
 import styles from "./businessPanel.module.css"
 import Image from 'next/image'
-import Head from "next/head"
 import { useEffect, useState } from "react"
-import VisibilitySensor from 'react-visibility-sensor';
 
 
 const BusinessPanel=({text,picture}) =>{ 
@@ -11,13 +9,7 @@ const [visible,setVisible] = useState(false)
 const handleClick = (e) => {
     setActive(e.target.id)
 }
-useEffect(()=>{
 
-},[])
-const visibleFunc=(isVisible)=>{
-    console.log(isVisible)
-
-}
     return ( 
         <>
 
@@ -33,7 +25,7 @@ const visibleFunc=(isVisible)=>{
 
             </div>
             <div className={styles.textContainer}> 
-            <VisibilitySensor onChange={visibleFunc}>
+           
             <div className={styles.infoPicker}>
             <p onClick={handleClick} id="1" className={active==="1"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
             Business Strategies
@@ -45,7 +37,7 @@ const visibleFunc=(isVisible)=>{
             Merger and acquisition
             </p>
         </div>
-                    </VisibilitySensor>
+                   
 
             {active==="1"?
             <>

@@ -1,4 +1,4 @@
-import FourthPanel from "../components/fourthPanel"
+import ContactUs from "../components/contactUs"
 import NavBar from "../components/navbar"
 
 
@@ -7,8 +7,7 @@ const Contact = () => {
 
 return (
     <>
-    <NavBar />
-    <FourthPanel />
+    <ContactUs />
     </>
 )
 
