@@ -30,7 +30,7 @@ const AboutUs = () => {
 
 
             <div className={styles.title}>
-                <p> About Us </p>
+                <p>Get Started </p>
             </div>
         {/*<div className={styles.text}>
             <div className={styles.subTextLeftContainer}>

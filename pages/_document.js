@@ -8,7 +8,6 @@ class MyDocument extends Document {
         <Head >
         <link rel="shortcut icon" href="/images/owlCircle.png" />
         <meta name="description" content="your one-stop solution for web development and business consulting"/>
-            <title>Website development and Business Consulting in Montreal</title>
         </Head>
         <body>
           <Main />

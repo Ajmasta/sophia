@@ -16,7 +16,7 @@ const ParallaxCustom = (props) => {
         image.style.setProperty("transform",`translateY(${(height-750)*0.5}px)`)}
        
        
-        window.addEventListener("scroll",setScroll)
+        window.addEventListener("scroll",setScroll,{passive: true})
         
         return ()=>{ window.removeEventListener("scroll",setScroll)}
     },[height])
