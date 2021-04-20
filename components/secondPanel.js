@@ -13,7 +13,7 @@ const SecondPanel = () => {
         <ParallaxCustom className={styles.container} mobileHeight={"900px"} containerHeight={"900px"} imageSource={"/images/buildingBackground2.jpg"}>
         <div className={styles.textContainer}>
                 <h1 className={styles.title}>Are you looking to grow your business?</h1>
-                <h3 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h3>
+                <h2 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h2>
 
                 <p className={styles.text}>
                     Through our knowledge and passion for finance and technology, we want to help you build up your company to its fullest potential. No need to hire multiple companies anymore. We take care of everything for you.

@@ -25,7 +25,7 @@ const ParallaxCustom = (props) => {
     <>
     <div className={styles.container} style={{minHeight:props.containerHeight}}>
 
-                <Image src={props.imageSource} layout="fill" id="imageParallax" className={styles.image} />
+                <Image alt="parallax buildings" src={props.imageSource} layout="fill" id="imageParallax" className={styles.image} />
                 <div style={{position:"absolute"}}> {props.children}</div>
       
     </div>
