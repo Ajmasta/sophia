@@ -11,14 +11,14 @@
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  margin-top: 100px;
 }
 .image {
   object-fit: cover;
-  width: 100%;
   position: fixed !important;
-  min-height: 1000px !important;
   top: 0;
   left: 0;
+  margin-top: 0px !important;
 }
 @media (min-width: 801px) and (max-width: 1200px) {
   .specialScroll {
@@ -28,5 +28,17 @@
   }
   .image {
     min-height: 1366px !important;
+  }
+}
+@media (max-width: 801px) {
+  .specialScroll {
+    margin-top: 75px;
+    max-height: 600px;
+    min-height: 600px;
+  }
+  .image {
+    min-height: 1366px !important;
+    object-fit: none;
+    max-width: 100% !important;
   }
 }
