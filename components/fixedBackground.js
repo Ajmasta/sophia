@@ -13,10 +13,10 @@ const FixedBackground = (props) => {
             
             }
     
-    
-        window.addEventListener("scroll",setScroll,{passive:true} )
+    const setAnimation = () => window.requestAnimationFrame(setScroll)
+        window.addEventListener("scroll",setAnimation,{passive:true} )
         
-        return ()=>{ window.removeEventListener("scroll",setScroll,{passive:true})}
+        return ()=>{ window.removeEventListener("scroll",setAnimation,{passive:true})}
     },[])
 return ( 
 <> 

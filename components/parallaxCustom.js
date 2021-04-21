@@ -14,12 +14,12 @@ const ParallaxCustom = (props) => {
         setHeight(scrollY)
         const image = document.getElementById("imageParallax");
         if (image)
-        image.style.setProperty("transform",`translateY(${(height-750)*0.5}px)`)}
-       
-       
-        window.addEventListener("scroll",setScroll,{passive: true})
+        image.style.setProperty("transform",`translateY(${(height-750)*0.5}px)`)
+        }
+       setAnimation=()=> window.requestAnimationFrame(setScroll)
+        window.addEventListener("scroll",setAnimation,{passive: true})
         
-        return ()=>{ window.removeEventListener("scroll",setScroll),{passive:true}}
+        return ()=>{ window.removeEventListener("scroll",setAnimation),{passive:true}}
     },[height])
 
     return(
