@@ -1,6 +1,6 @@
-import { PinDropSharp } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import styles from "./fixedBackground.module.css"
+import Image from "next/image";
 
 
 
@@ -11,7 +11,7 @@ const FixedBackground = (props) => {
         const setScroll=()=>{
             setHeight(scrollY)
             const div = document.getElementById("specialScroll")
-            div.style.setProperty("background-position",`left ${scrollY}px`)
+            div.style.setProperty("top",`${scrollY}px`)
             
             }
     
@@ -22,8 +22,9 @@ const FixedBackground = (props) => {
     },[height])
    console.log(height)
 return ( 
-<>
-    <div className={styles.specialScroll} id="specialScroll" >
+<> 
+    <div className={styles.specialScroll}  >
+    <Image src="/images/montrealNight2.jpg" layout="fill" id="specialScroll" className={styles.image} />
         {props.children}
     </div>
     </>
