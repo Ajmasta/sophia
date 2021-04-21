@@ -1,4 +1,5 @@
 .specialScroll {
+  margin-top: 100px;
   background-size: cover;
   background-attachment: scroll;
   background-image: url("../public/images/montrealNight2.jpg");
@@ -15,5 +16,6 @@
 }
 @media (max-width: 800px) {
   .specialScroll {
+    margin-top: 75px;
   }
 }

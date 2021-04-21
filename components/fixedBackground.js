@@ -8,7 +8,12 @@ const FixedBackground = (props) => {
     const [height,setHeight] = useState(0)
 
     useEffect(()=>{
-        const setScroll=()=>{setHeight(window.scrollY)}
+        const setScroll=()=>{
+            setHeight(scrollY)
+            const div = document.getElementById("specialScroll")
+            div.style.setProperty("background-position",`left ${scrollY}px`)
+            
+            }
     
     
         window.addEventListener("scroll",setScroll )
@@ -18,7 +23,7 @@ const FixedBackground = (props) => {
    console.log(height)
 return ( 
 <>
-    <div className={styles.specialScroll}  style={{backgroundPosition:`left ${height}px`}}>
+    <div className={styles.specialScroll} id="specialScroll" >
         {props.children}
     </div>
     </>
