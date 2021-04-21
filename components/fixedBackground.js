@@ -21,7 +21,7 @@ const FixedBackground = (props) => {
 return ( 
 <> 
     <div className={styles.specialScroll} >
-    <img src="/images/montrealNight2.jpg" className={styles.image} style={{minHeight:height}} /> 
+    <img src="/images/montrealNight2.jpg" className={styles.image}  /> 
     {props.children}
     </div>
 

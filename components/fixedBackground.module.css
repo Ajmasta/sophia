@@ -17,7 +17,7 @@
 .image {
   object-fit: cover;
   width: 100%;
-  min-height: 120%;
+  min-height: 120% !important;
   position: fixed;
   top: 0;
   left: 0;
