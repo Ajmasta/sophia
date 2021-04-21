@@ -3,6 +3,7 @@
   background-size: cover;
   background-attachment: scroll;
   background-image: url("../public/images/montrealNight2.jpg");
+  background-color: rgb(0, 0, 0);
   max-height: 700px;
   min-height: 700px;
   min-width: 100%;
