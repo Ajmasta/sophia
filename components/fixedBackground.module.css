@@ -17,15 +17,19 @@
 .image {
   object-fit: cover;
   width: 100%;
-  min-height: 120% !important;
-  position: fixed;
+  position: fixed !important;
+  min-height: 1000px !important;
   top: 0;
   left: 0;
+  bottom: 0;
 }
-@media (max-width: 800px) {
+@media (min-width: 801px) and (max-width: 1200px) {
   .specialScroll {
     margin-top: 75px;
     max-height: 600px;
     min-height: 600px;
+  }
+  .image {
+    min-height: 1366px !important;
   }
 }
