@@ -13,6 +13,7 @@ const ParallaxCustom = (props) => {
             
         setHeight(scrollY)
         const image = document.getElementById("imageParallax");
+        if (image)
         image.style.setProperty("transform",`translateY(${(height-750)*0.5}px)`)}
        
        

@@ -8,8 +8,9 @@ const elements = ["Solutions","Portfolio", "Blog", "About Us"]
 const[scroll,setScroll] = useState(false)
 const checkScroll = () => window.scrollY>0? setScroll(true):setScroll(false)
   useEffect(()=>{
-      window.addEventListener("scroll",checkScroll)
+      window.addEventListener("scroll",checkScroll, {passive:true})
     
+      return ()=> window.removeEventListener("scroll",checkScroll,{passive:true})
     })
 return(
     <div className={scroll? styles.containerScrolled:styles.container}>

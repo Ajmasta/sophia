@@ -1,0 +1,21 @@
+.specialScroll {
+  margin-top: 100px;
+  background-size: cover;
+  background-attachment: scroll;
+  background-image: url("../public/images/montrealNight2.jpg");
+  max-height: 700px;
+  min-height: 700px;
+  min-width: 100%;
+  background-position: left top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .specialScroll {
+    margin-top: 75px;
+  }
+}

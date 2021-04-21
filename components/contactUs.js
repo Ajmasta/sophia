@@ -3,22 +3,32 @@ import TextField from '@material-ui/core/TextField';
 import { Button } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import ParallaxCustom from "./parallaxCustom";
+import FixedBackground from "./fixedBackground";
+import NavBar from "./navbar";
 
 const ContactUs = () => { 
-  const [height,setHeight] = useState(0)
+
  
 
-useEffect(()=>{
-    const setScroll=()=>{console.log(height) ; setHeight(window.pageYOffset)}
 
-
-    window.addEventListener("scroll",setScroll)
-    
-    return ()=>{ window.removeEventListener("scroll",setScroll)}
-},[height])
+   
     return( 
             <>
-        <ParallaxCustom containerHeight={"1200px"} imageSource={"/images/montrealNight2.jpg"} >
+            <NavBar />
+                <FixedBackground>
+
+                <div className={styles.textContainer}>
+                    <div className={styles.textTitle}>
+                        Let's Start a Project Together
+                    </div>
+
+                    <div className={styles.text}>
+                        We are eager to listen to you, evaluate your needs, and start working together. <br/>
+                        Send us a message so we can start as quickly as possible.
+                    </div>
+                    </div>
+
+                </FixedBackground>
                 <div  id="containerContact" className={styles.container}  >
                 
                
@@ -34,8 +44,7 @@ useEffect(()=>{
                 </div>
                 
                 </div>
-                <p style={{marginBottom:"600px"}}>SCROLL</p>
-                </ParallaxCustom>
+               
          </>
 
     )
