@@ -12,15 +12,17 @@ const FixedBackground = (props) => {
         const setScroll=()=>{console.log(height) ; setHeight(window.scrollY)}
     
     
-        window.addEventListener("scroll",setScroll, {passive:true})
+        window.addEventListener("scroll",setScroll )
         
-        return ()=>{ window.removeEventListener("scroll",setScroll), {passive:true}}
+        return ()=>{ window.removeEventListener("scroll",setScroll)}
     },[height])
 return ( 
-
+<>
     <div className={styles.specialScroll}  style={{backgroundPosition:`left ${height}px`}}>
         {props.children}
     </div>
+    <div classname={styles.fixed}></div>
+    </>
 )
 }
 
