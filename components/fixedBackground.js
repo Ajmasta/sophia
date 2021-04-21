@@ -5,25 +5,28 @@ import Image from "next/image";
 
 
 const FixedBackground = (props) => {
-
+    const [height,setHeight] = useState(0)
     useEffect(()=>{
         const setScroll=()=>{
             const div = document.getElementById("specialScroll")
-            div.style.setProperty("top",`${pageYOffset}px`)
+           
+           div.style.setProperty("background-position",`left ${pageYOffset}px`)
             
             }
     
     const setAnimation = () => window.requestAnimationFrame(setScroll)
         window.addEventListener("scroll",setAnimation,{passive:true} )
         
-        return ()=>{ window.removeEventListener("scroll",setAnimation,{passive:true})}
+        return ()=>{ window.removeEventListener("scroll",setScroll,{passive:true})}
     },[])
 return ( 
 <> 
-    <div className={styles.specialScroll}   >
-    <Image src="/images/montrealNight2.jpg" id="specialScroll" layout="fill" className={styles.image} />
-        {props.children}
+    <div className={styles.specialScroll} id="specialScroll" >
+    
+    {props.children}
     </div>
+
+
     </>
 )
 }
