@@ -36,9 +36,4 @@
     max-height: 600px;
     min-height: 600px;
   }
-  .image {
-    min-height: 1366px !important;
-    object-fit: none;
-    max-width: 100% !important;
-  }
 }
