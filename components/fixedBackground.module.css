@@ -18,7 +18,6 @@
 }
 .image {
   object-fit: cover;
-  min-height: 1800px;
   width: 100%;
   position: absolute;
   min-height: 120% !important;

@@ -9,8 +9,7 @@ const FixedBackground = (props) => {
     useEffect(()=>{
         const setScroll=()=>{
             const div = document.getElementById("specialScroll")
-           
-           div.style.setProperty("background-position",`left ${pageYOffset}px`)
+           setHeight(pageYOffset)
             
             }
     
@@ -21,8 +20,8 @@ const FixedBackground = (props) => {
     },[])
 return ( 
 <> 
-    <div className={styles.specialScroll} id="specialScroll" >
-    
+    <div className={styles.specialScroll} >
+    <img src="/images/montrealNight2.jpg" id="specialScroll"  style={{top:height}} alt="montreal at night" className={styles.image} />
     {props.children}
     </div>
 
