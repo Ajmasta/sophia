@@ -19,7 +19,7 @@ const ParallaxCustom = (props) => {
        
         window.addEventListener("scroll",setScroll,{passive: true})
         
-        return ()=>{ window.removeEventListener("scroll",setScroll)}
+        return ()=>{ window.removeEventListener("scroll",setScroll),{passive:true}}
     },[height])
 
     return(

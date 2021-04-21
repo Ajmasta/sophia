@@ -6,16 +6,12 @@ import ParallaxCustom from "./parallaxCustom";
 import FixedBackground from "./fixedBackground";
 import NavBar from "./navbar";
 
-const ContactUs = ({height}) => { 
-
- 
-
-
+const ContactUs = () => { 
    
     return( 
             <>
-            <NavBar />
-                <FixedBackground height={height}>
+            
+                <FixedBackground>
 
                 <div className={styles.textContainer}>
                     <div className={styles.textTitle}>

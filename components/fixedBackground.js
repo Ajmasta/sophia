@@ -5,22 +5,19 @@ import Image from "next/image";
 
 
 const FixedBackground = (props) => {
-    const [height,setHeight] = useState(0)
 
     useEffect(()=>{
         const setScroll=()=>{
-            setHeight(scrollY)
             const div = document.getElementById("specialScroll")
-            div.style.setProperty("top",`${scrollY}px`)
+            div.style.setProperty("top",`${pageYOffset}px`)
             
             }
     
     
-        window.addEventListener("scroll",setScroll )
+        window.addEventListener("scroll",setScroll,{passive:true} )
         
-        return ()=>{ window.removeEventListener("scroll",setScroll)}
-    },[height])
-   console.log(height)
+        return ()=>{ window.removeEventListener("scroll",setScroll,{passive:true})}
+    },[])
 return ( 
 <> 
     <div className={styles.specialScroll}   >
