@@ -9,7 +9,7 @@ const FixedBackground = (props) => {
     useEffect(()=>{
         const setScroll=()=>{
             const div = document.getElementById("specialScroll")
-           setHeight(pageYOffset)
+           //setHeight(pageYOffset)
             
             }
     
