@@ -23,8 +23,8 @@ const FixedBackground = (props) => {
    console.log(height)
 return ( 
 <> 
-    <div className={styles.specialScroll}  >
-    <Image src="/images/montrealNight2.jpg" layout="fill" id="specialScroll" className={styles.image} />
+    <div className={styles.specialScroll}   >
+    <Image src="/images/montrealNight2.jpg" id="specialScroll" layout="fill" className={styles.image} />
         {props.children}
     </div>
     </>

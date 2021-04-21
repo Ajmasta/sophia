@@ -12,6 +12,7 @@
   justify-items: center;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
 }
 .image {
   object-fit: cover;
@@ -24,5 +25,7 @@
 @media (max-width: 800px) {
   .specialScroll {
     margin-top: 75px;
+    max-height: 600px;
+    min-height: 600px;
   }
 }
