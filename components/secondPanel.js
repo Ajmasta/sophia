@@ -13,7 +13,7 @@ const SecondPanel = () => {
     <Parallax className={styles.container}
 
 
-    strength={500}
+    strength={400}
     bgStyle={{background:"center"}}>
 
     <Background bgClassName={styles.background}>
