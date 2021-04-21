@@ -21,7 +21,7 @@ return (
     <div className={styles.specialScroll}  style={{backgroundPosition:`left ${height}px`}}>
         {props.children}
     </div>
-    <div classname={styles.fixed}></div>
+    <div className={styles.fixed}></div>
     </>
 )
 }

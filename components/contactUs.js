@@ -14,7 +14,7 @@ const ContactUs = () => {
    
     return( 
             <>
-            <NavBar />
+            
                 <FixedBackground>
 
                 <div className={styles.textContainer}>
