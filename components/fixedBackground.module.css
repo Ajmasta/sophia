@@ -1,6 +1,5 @@
 .specialScroll {
   background-color: rgb(0, 0, 0);
-  background-image: url("../public/images/whitePaper.jpg");
   max-height: 700px;
   min-height: 700px;
   min-width: 100%;
@@ -12,6 +11,7 @@
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  background-color: transparent;
 }
 .propsContainer {
   position: fixed;
@@ -41,7 +41,6 @@
     min-height: 600px;
   }
   .image {
-    top: 75px;
     object-fit: none !important;
     min-width: 100% !important;
     max-width: 100% !important;
