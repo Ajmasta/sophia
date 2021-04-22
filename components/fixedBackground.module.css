@@ -13,6 +13,9 @@
   position: relative;
   overflow: hidden;
 }
+.propsContainer {
+  position: fixed;
+}
 .image {
   object-fit: cover;
   position: fixed !important;

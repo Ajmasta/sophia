@@ -52,7 +52,7 @@ const AboutUs = () => {
 
 
         <Link href="contact"><Button className={styles.submitButton}> Start a Project </Button></Link>
-        <Link href="contact"><Button className={styles.submitButton}> Meet Our Team</Button></Link>
+        <Link href="contact"><Button  className={styles.submitButton}> Meet Our Team</Button></Link>
 
         <Link href="contact"><Button className={styles.submitButton}> Learn About Our Process</Button></Link>
 

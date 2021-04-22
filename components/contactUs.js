@@ -10,9 +10,8 @@ const ContactUs = () => {
    
     return( 
             <>
-            
-                <FixedBackground>
-
+        
+        <FixedBackground >
                 <div className={styles.textContainer}>
                     <div className={styles.textTitle}>
                         Let's Start a Project Together
@@ -23,13 +22,9 @@ const ContactUs = () => {
                         Send us a message so we can start as quickly.
                     </div>
                     </div>
-
-                </FixedBackground>
-                <div  id="containerContact" className={styles.container}  >
+            </FixedBackground>
+                    <div  id="containerContact" className={styles.container} >
                 
-               
-                
-
                 <div className={styles.formContainer}>
                 <div className={styles.formTitle}>Contact us</div>
                     <TextField className={`${styles.inputField} ${styles.inputName}`} label="First Name" /> 
