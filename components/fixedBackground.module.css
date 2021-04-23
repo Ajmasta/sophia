@@ -12,19 +12,21 @@
   position: relative;
   overflow: hidden;
   background-color: transparent;
+  min-height: 100vh;
 }
 .propsContainer {
   position: fixed;
 }
 .image {
   object-fit: cover;
-  position: fixed !important;
+  position: fixed;
   top: 0;
   left: 0;
-  min-width: 100% !important;
-  max-width: 100% !important;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 }
+
 @media (min-width: 801px) and (max-width: 1200px) {
   .specialScroll {
     margin-top: 75px;
@@ -41,7 +43,7 @@
     min-height: 600px;
   }
   .image {
-    object-fit: none !important;
+    object-fit: cover !important;
     min-width: 100% !important;
     max-width: 100% !important;
     min-height: 1500px !important;
