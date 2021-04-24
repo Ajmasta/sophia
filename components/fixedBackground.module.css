@@ -10,7 +10,6 @@
   justify-items: center;
   flex-wrap: wrap;
   position: relative;
-  overflow: hidden;
   background-color: transparent;
   min-height: 100vh;
 }

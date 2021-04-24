@@ -1,11 +1,15 @@
+import ContactUs from "../components/contactUs"
 import FixedBackgroundSticky from "../components/fixedBackgroundSticky"
+import NavBar from "../components/navbar"
 
 
 const Test = () => { 
    
     return (
         <>
-        <FixedBackgroundSticky />
+        <NavBar />
+        <FixedBackgroundSticky >
+        </FixedBackgroundSticky>
         </>
     )
     
