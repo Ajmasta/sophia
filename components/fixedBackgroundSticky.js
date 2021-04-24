@@ -10,6 +10,7 @@ const FixedBackgroundSticky = (props) => {
         const initialTop  = sticky.getBoundingClientRect().top
     window.addEventListener("scroll", ()=>{
         const stickyPos= sticky.getBoundingClientRect()
+        console.log("pos",stickyPos)
         if (stickyPos.top <=100 ){
         sticky.style.setProperty("position","fixed")
         sticky.style.setProperty("z-index","-1")
