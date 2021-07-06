@@ -1,15 +1,20 @@
+import BusinessPanel from "../components/businessPanel"
 import ContactUs from "../components/contactUs"
 import FixedBackgroundSticky from "../components/fixedBackgroundSticky"
 import NavBar from "../components/navbar"
+import PortfolioTiles from "../components/portfolioTiles"
 
 
 const Test = () => { 
    
     return (
         <>
-        <NavBar />
-        <FixedBackgroundSticky >
-        </FixedBackgroundSticky>
+        {/*<NavBar />
+        <BusinessPanel  picture={"/images/business.jpg"} />
+        <FixedBackgroundSticky text={"bluh"} />
+        <FixedBackgroundSticky text={"test"} />*/}
+        <PortfolioTiles /> 
+        
         </>
     )
     

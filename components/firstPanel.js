@@ -46,10 +46,7 @@ const FirstPanel = () => {
         const topPosition = `${e.clientY+scrollY}px`
         setOwlArray([...owlArray,{leftPosition,topPosition}])
     }
-    const handleMouseEnterLetter = (e) => { 
-        //e.target.style.color = "black"
 
-    }
 const handleMouseLeave = () => { 
     const circleCursor = document.getElementById("circleCursor")
     circleCursor.style.display="none"
@@ -77,12 +74,12 @@ const handleMouseEnter = (e) => {
                 <div className={styles.leftBar}>
                     <div className={styles.leftBarBullet} ></div>
                 </div>
-                <span onMouseEnter={handleMouseEnterLetter}  id="letter1"  className={styles.letter1}>S</span>
-                <span onMouseEnter={handleMouseEnterLetter} id="letter2" className={styles.letter2}>O</span>
-                <span onMouseEnter={handleMouseEnterLetter} id="letter3" className={styles.letter3}>P</span>
-                <span onMouseEnter={handleMouseEnterLetter} id="letter4" className={styles.letter4}>H</span>
-                <span onMouseEnter={handleMouseEnterLetter} id="letter5" className={styles.letter5}>I</span>
-                <span onMouseEnter={handleMouseEnterLetter} id="letter6" className={styles.letter6}>A</span>
+                <span   id="letter1"  className={styles.letter1}>S</span>
+                <span  id="letter2" className={styles.letter2}>O</span>
+                <span  id="letter3" className={styles.letter3}>P</span>
+                <span  id="letter4" className={styles.letter4}>H</span>
+                <span  id="letter5" className={styles.letter5}>I</span>
+                <span  id="letter6" className={styles.letter6}>A</span>
                 <div className={styles.rightBar}>
                     <div className={styles.rightBarBullet} ></div>
                 </div>

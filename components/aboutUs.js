@@ -21,7 +21,7 @@ const AboutUs = () => {
         <div className={styles.margin}><VisibilitySensor onChange={handleVisible}><p>a</p></VisibilitySensor></div>
             <div className={styles.anchor}>
             
-             <AnimateHeight duration={1000} height={height} className={"endScroll"}>
+             <AnimateHeight duration={500} height={height} className={"endScroll"}>
         <div id="placeholder" className={styles.placeholder}>
           
 
@@ -52,11 +52,10 @@ const AboutUs = () => {
 
 
         <Link href="contact"><Button className={styles.submitButton}> Start a Project </Button></Link>
-        <Link href="contact"><Button  className={styles.submitButton}> Meet Our Team</Button></Link>
+        <Link href="contact"><Button  className={styles.submitButton}> Check our past projects</Button></Link>
 
-        <Link href="contact"><Button className={styles.submitButton}> Learn About Our Process</Button></Link>
 
-        <Link href="contact"><Button className={styles.submitButton}> Contact Us</Button></Link>
+        <Link href="contact"><Button className={styles.submitButton}> Ask your questions</Button></Link>
 
 
         </div>

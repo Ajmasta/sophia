@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from "react"
 
 const WebPanel=({text,picture}) =>{ 
-const [active,setActive] = useState("1")
+const [active,setActive] = useState("3")
 
 const handleClick = (e) => {
     setActive(e.target.id)
@@ -25,9 +25,10 @@ const handleClick = (e) => {
           
             <div className={styles.textContainer}> 
             <div className={styles.infoPicker}>
+            <p onClick={handleClick} id="3" className={active==="3"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>Digital Transformation</p>
+
             <p onClick={handleClick} id="1" className={active==="1"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>Web Development</p> 
-            <p onClick={handleClick} id="2" className={active==="2"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>Marketing Strategies</p>
-            <p onClick={handleClick} id="3" className={active==="3"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>Digital Optimization</p>
+            <p onClick={handleClick} id="2" className={active==="2"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>Digital Marketing</p>
         </div>
             {active==="1"?
             <>
@@ -65,17 +66,19 @@ const handleClick = (e) => {
             
             </>:
             <> 
-            <h2 className={styles.title}> Digital Optimization</h2>
+            <h2 className={styles.title}> Digital Transformation</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
-                <li className={styles.listElement}>Coding of scripts for automatization</li>
-                <li className={styles.listElement}> Use of 3rd party software for Optimization</li>
-                <li className={styles.listElement}>Creation of financial models</li>
+                <li className={styles.listElement}>Automatization of repetitive tasks</li>
+                <li className={styles.listElement}> Use of 3rd party software for optimizing company processes</li>
+                <li className={styles.listElement}>Upgrading outdated software</li>
+                <li className={styles.listElement}>Building online stores</li>
         
                 
                 
                 </ul>
-            <p className={styles.description}> Are you tired of wasting time doing repetitive tasks? Our team will help you make your business more efficient, by optimizing and automatizing various tasks. </p>
+            <p className={styles.description}> The best businesses require the best technologies. We can help you migrate your legacy softwares to future-proof solutions, launch or improve your website, 
+                              launch a complete new digital strategy to improve your online presence or any other digital need you might have.</p>
             </div>
                 <button className={styles.button}>LEARN MORE</button> </>}
                 

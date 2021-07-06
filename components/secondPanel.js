@@ -22,29 +22,30 @@ const SecondPanel = () => {
     </Background>
           
         <div className={styles.textContainer}>
-                <h1 className={styles.title}>Are you looking to grow your business?</h1>
-                <h2 className={styles.title}>Sophia is your one-stop solution for all your business and digital needs.</h2>
+                <h1 className={styles.title}>Do you want to bring your business to a new dimension? </h1>
+                <h2 className={styles.title}>Sophia is the one-stop solution for business owners.</h2>
 
                 <p className={styles.text}>
-                    Through our knowledge and passion for finance and technology, we want to help you build up your company to its fullest potential. No need to hire multiple companies anymore. We take care of everything for you.
+                Through our experience and passion for business and technology, we will help you build up your company to its fullest potential. Whether it’s to prepare your business for more growth,  to run it more efficiently, or to improve your online presence we can help you. 
                 </p>
                 <div className={styles.iconContainer}> 
                     
                     <div className={styles.iconSingleContainer}>
                         <LanguageIcon className={styles.icon} />
-                        <p>Web Development </p>
+                        <p>Digital Transformation </p>
                     </div>
                     <div className={styles.iconSingleContainer}>
                         <MonetizationOnIcon  className={styles.icon} />
-                        <p>Digital Marketing  </p>
+                        <p>Optimize your financial decisions </p>
                     </div>
                     <div className={styles.iconSingleContainer}>
-                        <BusinessCenterIcon className={styles.icon}/>
-                        <p>Business Consulting</p>
+                    <AssessmentIcon  className={styles.icon} />
+                        <p>Obtain strategy insights</p>
                     </div>
                     <div className={styles.iconSingleContainer}>
-                        <AssessmentIcon  className={styles.icon} />
-                        <p>Financial Analysis</p>
+                    <BusinessCenterIcon className={styles.icon}/>
+                       
+                        <p>Implement best practices</p>
                     </div>
                 </div>
                 </div>

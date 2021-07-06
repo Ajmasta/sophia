@@ -28,35 +28,30 @@ const handleClick = (e) => {
            
             <div className={styles.infoPicker}>
             <p onClick={handleClick} id="1" className={active==="1"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Business Strategies
+            Financial Decisions
             </p> 
             <p onClick={handleClick} id="2" className={active==="2"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Financial Analysis
+            Strategy Insights
             </p>
             <p onClick={handleClick} id="3" className={active==="3"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Merger and acquisition
+            Best Practices
             </p>
         </div>
                    
 
             {active==="1"?
             <>
-            <h2 className={styles.title}> Business Strategies</h2>
+            <h2 className={styles.title}> Financial Decisions</h2>
             <div className={styles.subTextContainer}>
-                <ul className={styles.listContainer}>
-                <li className={styles.listElement}> Full-stack web development</li>
-                <li className={styles.listElement}>Progressive Web Apps</li>
-                <li className={styles.listElement}>React-native apps</li>
-                <li className={styles.listElement}>Landing Pages</li>
-                <li className={styles.listElement}>Wordpress websites</li>
-                
-                </ul>
+            
             <p className={styles.description}> 
-            We believe in the importance of aesthetics, user-friendliness and business-oriented practices for websites. Our team will build future-proof websites and apps that will represent and enhance your brand.</p>
+            Cash is king. We have reviewed thousands of businesses and ventures and can help you optimize the financial side of your company. 
+            We will help you assess new projects, manage your finance efficiently through financial tools and analysis, and optimise your capital structure
+            </p>
             </div>
                 <button className={styles.button}>LEARN MORE</button>
             </>:active==="2"?<> 
-            <h2 className={styles.title}> Financial Analysis</h2>
+            <h2 className={styles.title}> Strategy Insights</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
                 <li className={styles.listElement}>Marketing Strategies</li>
@@ -75,7 +70,7 @@ const handleClick = (e) => {
             
             </>:
             <> 
-            <h2 className={styles.title}> Merger and acquisition</h2>
+            <h2 className={styles.title}> Best Practices</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
                 <li className={styles.listElement}>Coding of scripts for automatization</li>

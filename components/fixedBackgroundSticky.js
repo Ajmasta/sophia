@@ -6,19 +6,20 @@ import styles from "./fixedBackgroundSticky.module.css"
 const FixedBackgroundSticky = (props) => {
    
     useEffect(()=>{
-        const sticky  = document.getElementById("sticky")
+        const sticky  = document.getElementById(props.text)
         const initialTop  = sticky.getBoundingClientRect().top
     window.addEventListener("scroll", ()=>{
         const stickyPos= sticky.getBoundingClientRect()
-        console.log("pos",stickyPos)
+        console.log("scoll",scrollY)
         if (stickyPos.top <=100 ){
         sticky.style.setProperty("position","fixed")
         sticky.style.setProperty("z-index","-1")
         console.log("fixed")
-        }else{
-
+        }else if(scrollY>Math.abs(initialTop)+stickyPos.height){
+            sticky.style.setProperty("position","relative")
+            sticky.style.setProperty("z-index","0")
         }
-        console.log(scrollY)
+        console.log("3", scrollY, Math.abs(initialTop)+stickyPos.height)
     })
      return () => window.removeEventListener("scroll", ()=>console.log(sticky.getBoundingClientRect()))
     }
@@ -27,15 +28,13 @@ const FixedBackgroundSticky = (props) => {
 
     return(
         <>
-                <div className={styles.filler}>a</div>
-
+    
         <div className={styles.container}>
 
-        <div className={styles.stickyContainer} id="sticky">
-            <img src="/images/montrealNight2.jpg" width={1200} height={800}  loading="lazy" className={styles.image} alt="montreal at night" /> 
+        <div className={styles.stickyContainer} id={props.text}>
             <div className={styles.textContainer}>
                     <div className={styles.textTitle}>
-                        Let's Start a Project Together
+                        Let's Start a Project Together {props.text}
                     </div>
 
                     <div className={styles.text}>
