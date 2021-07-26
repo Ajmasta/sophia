@@ -91,8 +91,8 @@ const handleMouseEnter = (e) => {
         {/* one stop*/}
         <div className={styles.horizontalTextContainer}>
             {subTextArray.map((subtext,i)=>{
-                if (i===0) return <span key={subtext+i}> <p   id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}>  {subtext}  </p> <p className={`${styles.subText} ${styles.subText0Animate} `}> | </p></span>
-                if (i===1) return <span key={subtext+i}> <p   id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}   </p> {mobile? "": <p className={`${styles.subText} ${styles.subText1Animate} `}> | </p>}</span>
+                if (i===0) return <div className={styles.subtextDiv} key={subtext+i} > <p   id={styles.subText0}  className={`${styles.subText} ${styles.subText0Animate} `}>  {subtext}  </p> <p className={`${styles.subText} ${styles.subText0Animate} `}> | </p></div>
+                if (i===1) return <div className={styles.subtextDiv} key={subtext+i}> <p   id={styles.subText1}  className={`${styles.subText} ${styles.subText1Animate}  `}> {subtext}   </p> {mobile? "": <p className={`${styles.subText} ${styles.subText1Animate} `}> | </p>}</div>
                 if (i===2 &&!mobile) return <p key={subtext+i}  id={styles.subText2}  className={`${styles.subText} ${styles.subText2Animate}  `}>  {subtext}  </p>
             })}
         </div>

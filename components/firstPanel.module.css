@@ -136,7 +136,10 @@
   align-items: flex-start;
   justify-items: flex-start;
 }
-
+.subtextDiv {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .movingTextContainer {
   height: 275px;
   width: 400px;
