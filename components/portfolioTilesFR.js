@@ -9,7 +9,7 @@ const PortfolioTiles = () => {
     return ( 
         <>
         <div className={styles.body}>
-        <p className={styles.title}>Our Partners</p>
+        <p className={styles.title}>Nos Partenaires</p>
 <div className={styles.tilesContainer}>
 
 <div className={styles.portfolioTile}> 

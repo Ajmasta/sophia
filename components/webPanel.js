@@ -45,7 +45,7 @@ const handleClick = (e) => {
             <p className={styles.description}> 
             We believe in the importance of aesthetics, user-friendliness and business-oriented practices for websites. Our team will build future-proof websites and apps that will represent and enhance your brand.</p>
             </div>
-                <button className={styles.button}>LEARN MORE</button>
+                
             </>:active==="2"?<> 
             <h2 className={styles.title}> Digital Marketing</h2>
             <div className={styles.subTextContainer}>
@@ -60,7 +60,7 @@ const handleClick = (e) => {
                 </ul>
             <p className={styles.description}> You need a strong marketing strategy to have an online presence nowadays. Our team will help you to brand and build all your digital assets. Make sure your website gets views. </p>
             </div>
-                <button className={styles.button}>LEARN MORE</button>
+                
             
             
             
@@ -80,7 +80,7 @@ const handleClick = (e) => {
             <p className={styles.description}> The best businesses require the best technologies. We can help you migrate your legacy softwares to future-proof solutions, launch or improve your website, 
                               launch a complete new digital strategy to improve your online presence or any other digital need you might have.</p>
             </div>
-                <button className={styles.button}>LEARN MORE</button> </>}
+                 </>}
                 
                 </div>
            

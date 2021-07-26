@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // one panel that turns into gold, one panel "leave your mark, make your marks on the web", one panel "build efficient business strategies", one panel ""
 const FirstPanel = () => {
-    const [subTextArray,setSubTextArray]= useState(["Business consulting","Web development","Social Media","Workflow optimization","Financial advising"])
+    const [subTextArray,setSubTextArray]= useState(["Consultation d'Affaires","Développement Web","Média Sociaux","Optimisation du flux de travail ","Conseil Financier"])
     const mobile = useMediaQuery("(max-width:800px)")
     const [owlArray,setOwlArray] = useState([])
     console.log(mobile,"mobile")
@@ -103,7 +103,7 @@ const handleMouseEnter = (e) => {
         <Image width={100} height={162} alt="owl Logo" src="/images/owl.png" />
         </div>
         <div className={styles.contactContainer}>
-            <button className={styles.contactButton}>Contact us</button>
+            <button className={styles.contactButton}>Contactez-nous</button>
         </div>
     </div>
     </>

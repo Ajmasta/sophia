@@ -159,7 +159,6 @@
   .listContainer {
     display: flex;
     flex-direction: column;
-    max-height: 125px;
     max-width: 300px;
   }
   .title {

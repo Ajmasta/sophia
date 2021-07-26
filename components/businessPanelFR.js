@@ -28,50 +28,50 @@ const handleClick = (e) => {
            
             <div className={styles.infoPicker}>
             <p onClick={handleClick} id="1" className={active==="1"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Financial Decisions
+            Décisions Financières
             </p> 
             <p onClick={handleClick} id="2" className={active==="2"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Strategy Insights
+            Perspective Stratégiques
             </p>
             <p onClick={handleClick} id="3" className={active==="3"? `${styles.infoElementActive} ${styles.infoElement}`:styles.infoElement}>
-            Best Practices
+            Meilleures Pratiques
             </p>
         </div>
                    
 
             {active==="1"?
             <>
-            <h2 className={styles.title}> Financial Decisions</h2>
+            <h2 className={styles.title}> Décisions Financières</h2>
             <div className={styles.subTextContainer}>
             <ul className={styles.listContainer}>
-                <li className={styles.listElement}>Business Plans</li>
-                <li className={styles.listElement}> Assessment of New Projects</li>
-                <li className={styles.listElement}>Financial and Performance Analysis</li>
-                <li className={styles.listElement}>Implementation of Financial Tools</li>
-                <li className={styles.listElement}>Financing and Liquidity Optimisation</li>
+                <li className={styles.listElement}>Plans d'Affaires</li>
+                <li className={styles.listElement}> Évaluation de Nouveaux Projets</li>
+                <li className={styles.listElement}>Analyse des finances et des performances</li>
+                <li className={styles.listElement}>Implémentation d'Outils Financiers</li>
+                <li className={styles.listElement}>Optimisation du Financement et de la Liquidité</li>
                 
                 
                 </ul>
             <p className={styles.description}> 
-            We have reviewed hundreds of businesses and ventures and can help you optimize the financial side of your company.            </p>
+            Nous avons examiné des centaines d'entreprises et de projets et nous pouvons vous aider à optimiser l'aspect financier de votre entreprise. </p>
             </div>
-              
+                
             </>:active==="2"?<> 
-            <h2 className={styles.title}> Strategy Insights</h2>
+            <h2 className={styles.title}> Perspectives Stratégiques</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
-                <li className={styles.listElement}>Comprehensive Strategic Review and Recommandations</li>
-                <li className={styles.listElement}> Assessment of Positioning, Strengths, Weaknesses and Opportunities</li>
-                <li className={styles.listElement}>Assessment of Competitive Landscape and Industry Trends</li>
-                <li className={styles.listElement}>Transformative Strategic Projects</li>
+                <li className={styles.listElement}>Évaluation Stratégique Complète et Recommandations</li>
+                <li className={styles.listElement}>Évaluation du Positionnement, des Forces, des Faiblesses et des Opportunités. </li>
+                <li className={styles.listElement}>Évaluation du Paysage Concurrentiel et des Tendances de l'Industrie</li>
+                <li className={styles.listElement}>Projets stratégiques transformateurs</li>
                 
                 
                 </ul>
             <p className={styles.description}> 
-            Competition is difficult but we can help you navigate your industry more easily so you can ultimately find your footing in your ecosystem.
-             </p>
+            La concurrence est difficile mais nous pouvons vous aider à naviguer plus facilement dans votre secteur pour que vous puissiez finalement trouver votre place dans votre écosystème.
+</p>
             </div>
-              
+                
             
             
             
@@ -80,19 +80,21 @@ const handleClick = (e) => {
             <h2 className={styles.title}> Best Practices</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
-                <li className={styles.listElement}>Sales</li>
+                <li className={styles.listElement}>Ventes</li>
                 <li className={styles.listElement}> Marketing</li>
-                <li className={styles.listElement}>Corporate Image</li>
-                <li className={styles.listElement}>HR</li>
-                <li className={styles.listElement}>Legal</li>
+                <li className={styles.listElement}>Image d'Entreprise</li>
+                <li className={styles.listElement}>Ressources Humaines</li>
+                <li className={styles.listElement}>Juridique</li>
         
                 
                 
                 </ul>
-            <p className={styles.description}>Running your business can be tough because owners usually have to be jacks of all trades and there are only so many hours in a day. We can help you make your business more efficient and save you time by helping you implement best practices.  </p>
+            <p className={styles.description}>
+            La gestion d'une entreprise peut s'avérer difficile car les propriétaires doivent généralement portent  plusieurs chapeaux et il n'y a qu'un nombre limité d'heures dans une journée. Nous pouvons vous aider à rendre votre entreprise plus efficace et vous faire gagner du temps en vous aidant à mettre en œuvre de meilleures pratiques. 
+
+             </p>
             </div>
-                 </>}
-                
+            </>}
                 </div>
            
             </div>
