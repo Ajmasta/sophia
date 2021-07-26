@@ -13,7 +13,7 @@ const PortfolioTiles = () => {
 <div className={styles.tilesContainer}>
 
 <div className={styles.portfolioTile}> 
-        <Image className={styles.image} src="/images/backToHealthLogo2.png" width="304" height="152"></Image>
+        <Image className={styles.image} src="/images/backToHealthLogo.png" width="304" height="152"></Image>
 
         </div>
         <div id={styles.portfolioTilePhoenix} className={styles.portfolioTile}> 
