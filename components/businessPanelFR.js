@@ -77,7 +77,7 @@ const handleClick = (e) => {
             
             </>:
             <> 
-            <h2 className={styles.title}> Best Practices</h2>
+            <h2 className={styles.title}> Meilleures Pratiques</h2>
             <div className={styles.subTextContainer}>
                 <ul className={styles.listContainer}>
                 <li className={styles.listElement}>Ventes</li>
