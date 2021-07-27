@@ -5,7 +5,7 @@ import styles from "./navbar.module.css"
 
 const NavBar = ({height}) => { 
 const mobile = useMediaQuery("(max-width:1350px)")
-const elements = ["Solutions","Portfolio", "Blog", "About Us"]
+const elements = ["Solutions","Portfolio"]
 const[scroll,setScroll] = useState(false)
 const checkScroll = () => {window.pageYOffset>0? setScroll(true):setScroll(false)}
   useEffect(()=>{
@@ -17,7 +17,8 @@ return(
     <nav className={scroll? styles.containerScrolled:styles.container}>
     {mobile? "":scroll? <div className={styles.circleLogo} />:<div className={styles.circleLogoBlack} />}
 
-        {elements.map((element,i)=> <p key={`element${i}`} className={styles.navBarElements}> <Link href="/">{element}</Link></p>)}
+        {elements.map((element,i)=> <p key={`element${i}`} className={styles.navBarElements}> <Link href={"/#"+element}>{element}</Link></p>)}
+        <p key={`Contact`} className={styles.navBarElements}> <Link href={"/contact"}>Contact Us</Link></p>
     </nav>
 
 )

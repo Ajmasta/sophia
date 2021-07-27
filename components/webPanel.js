@@ -13,7 +13,7 @@ const handleClick = (e) => {
         <>
 
         
-        <div className={styles.container}>
+        <div id="Solutions" className={styles.container}>
         
         <div className={styles.infoDisplay}>
             <div className={styles.pictureContainer}> 

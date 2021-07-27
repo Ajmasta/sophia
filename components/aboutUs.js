@@ -18,7 +18,7 @@ const AboutUs = () => {
             }
     return(
         <>
-        <div className={styles.margin}><VisibilitySensor onChange={handleVisible}><p>a</p></VisibilitySensor></div>
+        <div id="Start a Project" className={styles.margin}><VisibilitySensor onChange={handleVisible}><p>a</p></VisibilitySensor></div>
             <div className={styles.anchor}>
             
              <AnimateHeight duration={500} height={height} className={"endScroll"}>
